@@ -1,0 +1,18 @@
+import React from "react";
+import "../styles/landing_page.scss";
+import landing_img from "../assets/landing_page_img.png";
+import InfoSection from "./InfoSection";
+
+const LandingPage = () => {
+  return (
+    <div className="d-flex flex-column align-items-center">
+      <div className="p-2 landing-img-container">
+        <img id="landing-img" src={landing_img} alt="" className="" />
+      </div>
+      <InfoSection />
+      <InfoSection />
+    </div>
+  );
+};
+
+export default LandingPage;
