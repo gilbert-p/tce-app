@@ -28,12 +28,12 @@ const Nav = () => {
               <ul className="navbar-nav">
                 <li className="nav-item active">
                   <a className="nav-link" href="#">
-                    Our Approach <span className="sr-only">(current)</span>
+                    Home <span className="sr-only">(current)</span>
                   </a>
                 </li>
                 <li className="nav-item active">
                   <a className="nav-link" href="#">
-                    Company
+                    Our Approach
                   </a>
                 </li>
                 <li className="nav-item active">

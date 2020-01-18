@@ -7,7 +7,7 @@ import Apply from "./Apply";
 
 const LandingPage = () => {
   return (
-    <div className="d-flex flex-column align-items-center">
+    <div className="d-flex flex-column align-items-center text">
       <div className="p-2 landing-img-container">
         <img id="landing-img" src={landing_img} alt="" className="" />
       </div>
