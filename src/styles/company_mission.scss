@@ -1,0 +1,43 @@
+.da-container {
+  width: auto;
+  max-width: 600px;
+}
+
+.company-mission-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: #242628;
+  margin-bottom: 50px;
+  overflow: hidden;
+  color: white;
+}
+
+.mission-img-container {
+  position: relative;
+  width: inherit;
+  max-width: 607px;
+  height: 500px;
+  max-height: 607px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  //   background-color: red;
+}
+
+#mission_img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  object-fit: fill;
+}
+
+.info-container {
+  //   position: relative;
+  margin-left: 100px;
+}
+
+.info-section {
+  position: inherit;
+  height: 100%;
+}

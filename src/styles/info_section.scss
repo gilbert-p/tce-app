@@ -1,0 +1,26 @@
+.info-section {
+  // left: 50%;
+  width: inherit;
+  height: auto;
+  // background-color: red;
+  margin-bottom: 50px;
+
+  h2 {
+    font-size: 2.5em;
+  }
+
+  #info-body {
+    position: relative;
+    width: 100%;
+    height: auto;
+    // background-color: lightseagreen;
+  }
+}
+
+#info-title {
+  text-align: center;
+}
+
+#info-body {
+  text-align: center;
+}
