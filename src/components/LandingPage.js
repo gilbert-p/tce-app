@@ -2,6 +2,8 @@ import React from "react";
 import "../styles/landing_page.scss";
 import landing_img from "../assets/landing_page_img.png";
 import InfoSection from "./InfoSection";
+import CompanyMission from "./CompanyMission";
+import Apply from "./Apply";
 
 const LandingPage = () => {
   return (
@@ -11,6 +13,8 @@ const LandingPage = () => {
       </div>
       <InfoSection />
       <InfoSection />
+      <CompanyMission />
+      <Apply />
     </div>
   );
 };
