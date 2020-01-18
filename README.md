@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Aaaron and Gilbert
+## Aaron and Gilbert
 
 ## Available Scripts
 
