@@ -1,0 +1,15 @@
+.applicants-table-status-incomplete {
+    color: red;
+}
+
+.applicants-table-status-complete {
+    color: green;
+}
+
+.applicants-table-row-odd {
+    background-color: lightgrey;
+}
+
+.applicants-table-row-even {
+    background-color: white;
+}
