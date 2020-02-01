@@ -1,0 +1,22 @@
+#newsletter-container {
+  position: relative;
+}
+
+#newsletter-title {
+  position: relative;
+  /* height: auto;
+  width: auto; */
+  top: -125px;
+  left: 115px;
+  color: white;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+#newsletter-img-container {
+  position: relative;
+  max-width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+}
