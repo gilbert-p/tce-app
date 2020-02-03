@@ -11,70 +11,49 @@
     <!-- Css Files Added -->
     <!--Footer CSS -->
     <link rel="stylesheet" href="assets/css/Footer-Dark.css" />
+    <!-- Nav Bar -->
+    <link rel="stylesheet" href="assets/css/Navigation-Clean.css"/>
     <!-- Bootstrap CSS Sources-->
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/fonts/ionicons.min.css" />
 
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
-    />
     <!-- Nav bar-->
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="careers.css" />
     <!-- Nav Bar End -->
+    <!-- Page CSS -->
+
     <title>Temple Culberson Enterprises</title>
   </head>
   <body>
-    <!-- Nav Bar -->
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">
-        <img src="./images/exports/tce_logo/TCE_LOGO@sm.png" alt="tce_logo" />
-      </a>
-      <button
-        class="navbar-toggler collapsed"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarsExample03"
-        aria-controls="navbarsExample03"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
+  <!-- Nav Bar Clean -->
+  <nav class="navbar navbar-light navbar-expand-md navigation-clean">
+    <img src="./images/exports/tce_logo/TCE_LOGO@sm.png" alt="tce_logo">
+    <div class="container">
+      <a class="navbar-brand" href="./index.html">Temple Culberson Enterprises</a>
+      <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span>
         <span class="navbar-toggler-icon"></span>
       </button>
-
-      <div class="navbar-collapse collapse" id="navbarsExample03" style="">
-        <h3 id="title_name" class="mx-5">Temple Culberson Enterprises</h3>
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html"
-              >Home <span class="sr-only">(current)</span></a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Our Approach</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./company.html">Company</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./newsletter.html">Newsletter</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="./careers.html">Careers</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="./contact.html">Contact</a>
+      <div class="collapse navbar-collapse" id="navcol-1">
+        <ul class="nav navbar-nav ml-auto">
+          <li class="nav-item" role="presentation"><a class="nav-link active" href="./index.html">Home</a></li>
+          <li class="nav-item" role="presentation"><a class="nav-link" href="./company.html">Company</a></li>
+          <li class="nav-item" role="presentation"><a class="nav-link" href="./newsletter.html">News</a></li>
+          <li class="nav-item" role="presentation"><a class="nav-link" href="./contact.html">Contact</a></li>
+          <li class="nav-item dropdown">
+            <a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="./careers.html">Careers</a>
+            <div class="dropdown-menu" role="menu">
+              <a class="dropdown-item" role="presentation" href="./careers.html">All Opportunities</a>
+              <a class="dropdown-item" role="presentation" href="./apply.html">Last Mile Delivery</a>
+              <a class="dropdown-item" role="presentation" href="./apply.html">Relay Delivery</a>
+              <a class="dropdown-item" role="presentation" href="./coming.html">Coming Soon</a>
+            </div>
           </li>
         </ul>
       </div>
-    </nav>
-    <!--Nav End-->
-
+    </div>
+  </nav>
+  <!-- Nav Bar Clean End -->
     <img
       class="img-fluid"
       src="./images/exports/landing_page_img.png"
