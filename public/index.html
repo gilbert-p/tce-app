@@ -12,15 +12,197 @@
     <script defer src="/__/firebase/7.8.0/firebase-database.js"></script>
     <script defer src="/__/firebase/7.8.0/firebase-messaging.js"></script>
     <script defer src="/__/firebase/7.8.0/firebase-storage.js"></script>
-    <script defer scr="/__/firebase/7.8.0/firebase-firestore.js"></script>
+    <script defer src="/__/firebase/7.8.0/firebase-firestore.js"></script>
     <!-- initialize the SDK after all desired features are loaded -->
     <script defer src="/__/firebase/init.js"></script>
+
+    <!-- Css Files Added -->
+    <!--Footer CSS -->
+    <link rel="stylesheet" href="./assets/css/Footer-Dark.css" />
+    <!-- Bootstrap CSS Sources-->
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/fonts/ionicons.min.css" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="index.css" />
+
+    <title>Temple Culberson Enterprises</title>
   </head>
 
   <body>
-    <button onclick="googleLogin()">
-      Login with Googlefirebase
-    </button>
+ <!-- Nav Bar -->
+ <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">
+    <img src="./images/tce_logo/TCE_LOGO@sm.png" alt="tce_logo" />
+  </a>
+  <button
+    class="navbar-toggler collapsed"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarsExample03"
+    aria-controls="navbarsExample03"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="navbar-collapse collapse" id="navbarsExample03" style="">
+    <h3 id="title_name" class="mx-5">Temple Culberson Enterprises</h3>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html"
+          >Home <span class="sr-only">(current)</span></a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Our Approach</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./company.html">Company</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./newsletter.html">Newsletter</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./careers.html">Careers</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./contact.html">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!--Nav End-->
+<!-- Landing Image -->
+<img class="img-fluid" src="./images/landing_page_img.png" alt="" />
+<!--Landing Image End -->
+
+<section class="jumbotron text-center">
+  <div class="container">
+    <h1 class="jumbotron-heading">Amazon Delivery Service Partner</h1>
+    <p class="lead text-muted">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur
+      labore magnam aut molestias temporibus error. Culpa quisquam nostrum
+      porro qui.
+    </p>
+  </div>
+</section>
+
+<section class="jumbotron text-center">
+  <div class="container">
+    <h1 class="jumbotron-heading">Become a Member</h1>
+    <p class="lead text-muted">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur
+      labore magnam aut molestias temporibus error. Culpa quisquam nostrum
+      porro qui.
+    </p>
+  </div>
+</section>
+
+<section id="company-mission" class="jumbotron text-center">
+  <div class="row">
+    <div class="col-4">
+      <img
+        src="./images/Photo by VanveenJF on Unsplash.png"
+        alt=""
+        class="img-fluid"
+        sytle="max-width: 100%"
+      />
+    </div>
+    <div class="text-left col-8 p-5">
+      <h2>
+        Company Mission
+      </h2>
+      <p class="pt-4">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus
+        beatae, quasi dignissimos sint modi impedit, reprehenderit eius
+        laborum esse voluptatum aperiam inventore commodi ex nostrum libero
+        minima totam quae pariatur!
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="jumbotron text-center">
+  <div class="container">
+    <h1 class="jumbotron-heading">Apply Today!</h1>
+    <p class="lead text-muted">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur
+      labore magnam aut molestias temporibus error. Culpa quisquam nostrum
+      porro qui.
+    </p>
+    <div class="btn btn-primary">
+      Click here to join now!
+    </div>
+  </div>
+</section>
+<!-- Footer -->
+<div class="footer-dark">
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-md-3 item">
+          <h3>Careers</h3>
+          <ul>
+            <li><a href="./careers.html">Last Mile Delivery</a></li>
+            <li><a href="./careers.html">Relay Delivery</a></li>
+            <li><a href="./coming.html">Coming Soon ...</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-6 col-md-3 item">
+          <h3>About</h3>
+          <ul>
+            <li><a href="./company.html">Company</a></li>
+            <li><a href="./contact.html">Contact Us</a></li>
+            <li><a href="./login.html">Log In</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 item text">
+          <h3>Temple Culberson Enterprises LLC</h3>
+          <p>
+            Praesent sed lobortis mi. Suspendisse vel placerat ligula.
+            Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis
+            tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel
+            in justo.
+          </p>
+        </div>
+        <div class="col item social">
+          <a href="#"><i class="icon ion-social-facebook"></i></a
+          ><a href="#"><i class="icon ion-social-twitter"></i></a
+          ><a href="#"><i class="icon ion-social-snapchat"></i></a
+          ><a href="#"><i class="icon ion-social-instagram"></i></a>
+        </div>
+      </div>
+      <p class="copyright">Temple Culberson Enterprises LLC © 2020</p>
+    </div>
+  </footer>
+</div>
+<!-- End Footer-->
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script
+  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+  crossorigin="anonymous"
+></script>
 
     <script src="./app.js" defer></script>
   </body>
