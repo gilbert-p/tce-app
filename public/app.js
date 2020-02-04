@@ -52,7 +52,7 @@ const applicationSubmit = () => {
   let db = firebase.firestore();
 
   db.collection("applicants")
-    .doc()
+    .doc(email)
     .set({
       firstName: firstName,
       lastName: lastName,
