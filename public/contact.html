@@ -27,6 +27,16 @@
     <link rel="stylesheet" href="contact.css" />
 
     <title>Temple Culberson Enterprises</title>
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/7.8.0/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/7.8.0/firebase-auth.js"></script>
+    <script defer src="/__/firebase/7.8.0/firebase-database.js"></script>
+    <script defer src="/__/firebase/7.8.0/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/7.8.0/firebase-storage.js"></script>
+    <script defer src="/__/firebase/7.8.0/firebase-firestore.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
   </head>
   <body>
     <!-- Nav Bar -->
@@ -100,16 +110,19 @@
           <div class="container">
             <div class="row">
               <div class="col-6">
-                <form id="contact-form" class="form-signin mt-4" method="POST">
+                <form
+                  id="contact-form"
+                  action="Javascript:app:contactSubmit()"
+                  class="form-signin mt-4"
+                >
                   <div class="form-label-group">
                     <input
                       type="text"
                       id="inputName"
                       class="form-control"
                       placeholder="Name"
-
                     />
-                    <label for="inputEmail"></label>
+                    <label for="inputName"></label>
                   </div>
                   <div class="form-label-group mt-1">
                     <input
@@ -117,29 +130,31 @@
                       id="inputEmail"
                       class="form-control"
                       placeholder="Email"
-
                     />
-                    <label for="inputPassword"></label>
+                    <label for="inputEmail"></label>
                   </div>
+                  <div class="col-6">
+                    <div class="form-group">
+                      <label for="exampleFormControlTextarea1"></label>
+                      <textarea
+                        class="form-control"
+                        id="messageInput"
+                        rows="5"
+                        cols="50"
+                        placeholder="Message"
+                      ></textarea>
+                    </div>
+                  </div>
+                  <input
+                    id="contact-submit"
+                    type="submit"
+                    class="cool-btn mt-3"
+                    value="submit"
+                  />
                 </form>
-              </div>
-              <div class="col-6">
-                <div class="form-group">
-                  <label for="exampleFormControlTextarea1"></label>
-                  <textarea
-                    class="form-control"
-                    id="exampleFormControlTextarea1"
-                    rows="5"
-                    cols="50"
-                    placeholder="Message"
-                  ></textarea>
-                </div>
               </div>
             </div>
           </div>
-          <button id="contact-submit" type="submit" onclick="contactSubmit()" class="cool-btn mt-3">
-            SUBMIT &rarr;
-          </button>
         </div>
       </div>
     </div>
@@ -228,7 +243,6 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="contact.js"></script>
-
+    <script src="app.js"></script>
   </body>
 </html>
