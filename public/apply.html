@@ -8,6 +8,18 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
     />
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/7.8.0/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/7.8.0/firebase-auth.js"></script>
+    <script defer src="/__/firebase/7.8.0/firebase-database.js"></script>
+    <script defer src="/__/firebase/7.8.0/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/7.8.0/firebase-storage.js"></script>
+    <script defer src="/__/firebase/7.8.0/firebase-firestore.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+
     <!-- Css Files Added -->
     <!--Footer CSS -->
     <link rel="stylesheet" href="assets/css/Footer-Dark.css" />
@@ -131,44 +143,50 @@
     <!--End of Job Description-->
 
     <div id="apply-form" class="container my-5">
-      <form>
+      <form id="apply-submit" action="Javascript:app:applicationSubmit()">
         <div class="form-row">
           <div class="col-md-4 mb-3">
-            <label for="validationServer01">First name</label>
+            <label for="apply-firstName">First name</label>
             <input
               type="text"
-              class="form-control is-valid"
-              id="validationServer01"
+              class="form-control"
+              id="apply-firstName"
               placeholder="First name"
-              value="Mark"
               required
             />
+            <div class="invalid-feedback">
+              Please enter a first name.
+            </div>
             <div class="valid-feedback">
               Looks good!
             </div>
           </div>
+
           <div class="col-md-4 mb-3">
-            <label for="validationServer02">Last name</label>
+            <label for="apply-lastName">Last name</label>
             <input
               type="text"
-              class="form-control is-valid"
-              id="validationServer02"
+              class="form-control"
+              id="apply-lastName"
               placeholder="Last name"
-              value="Otto"
               required
             />
+            <div class="invalid-feedback">
+              Please enter a last name.
+            </div>
             <div class="valid-feedback">
               Looks good!
             </div>
           </div>
         </div>
+
         <div class="form-row">
           <div class="col-md-6 mb-3">
-            <label for="validationServer03">Email</label>
+            <label for="apply-email">Email</label>
             <input
               type="email"
-              class="form-control is-invalid"
-              id="validationServer03"
+              class="form-control"
+              id="apply-email"
               placeholder="email@example.com"
               required
             />
@@ -180,10 +198,10 @@
 
         <h5>Upload Cv</h4>
         <div class="custom-file mb-3">
-          <input type="file" class="custom-file-input" id="customFile" />
+          <input type="file" class="custom-file-input" id="customFile" onchange="uploadFile(this.files)" />
           <label class="custom-file-label" for="customFile">Choose file</label>
         </div>
-        <button class="btn btn-primary" type="submit">Submit</button>
+        <input class="btn btn-primary" type="submit" value="submit" />
       </form>
     </div>
     <!--End of Form input-->
@@ -230,5 +248,23 @@
       </footer>
     </div>
     <!-- End Footer-->
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./app.js"></script>
   </body>
 </html>

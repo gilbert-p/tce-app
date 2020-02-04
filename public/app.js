@@ -25,7 +25,7 @@ const contactSubmit = () => {
   let email = $("#inputEmail").val();
   let message = $("#messageInput").val();
 
-  var db = firebase.firestore();
+  let db = firebase.firestore();
 
   db.collection("contact-messages")
     .doc()
@@ -43,6 +43,44 @@ const contactSubmit = () => {
 
   document.getElementById("contact-form").reset();
 };
+
+const applicationSubmit = () => {
+  let firstName = $("#apply-firstName").val();
+  let lastName = $("#apply-lastName").val();
+  let email = $("#apply-email").val();
+
+  let db = firebase.firestore();
+
+  db.collection("applicants")
+    .doc()
+    .set({
+      firstName: firstName,
+      lastName: lastName,
+      email: email
+    })
+    .then(function() {
+      console.log("Document successfully written!");
+    })
+    .catch(function(error) {
+      console.error("Error writing document: ", error);
+    });
+
+  document.getElementById("apply-submit").reset();
+};
+
+function uploadFile(files) {
+  const storageRef = firebase.storage().ref();
+  const resumeRef = storageRef.child("resume.doc");
+
+  const file = files.item(0);
+
+  const task = resumeRef.put(file);
+
+  task.then(snapshot => {
+    console.log(snapshot);
+    console.log(snapshot.downloadURL);
+  });
+}
 
 const displayContactPosts = () => {
   const db = firebase.firestore();
