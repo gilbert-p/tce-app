@@ -39,7 +39,7 @@
     <!-- Nav Bar -->
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
       <a class="navbar-brand" href="#">
-        <img src="./images/tce_logo/TCE_LOGO@sm.png" alt="tce_logo" />
+        <img src="./assets/img/tce_logo/TCE_LOGO@sm.png" alt="tce_logo" />
       </a>
       <button
         class="navbar-toggler collapsed"
@@ -60,9 +60,6 @@
             <a class="nav-link" href="index.html"
               >Home <span class="sr-only">(current)</span></a
             >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Our Approach</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="./company.html">Company</a>
@@ -87,7 +84,7 @@
         <div class="col-12">
           <img
             class="img-fluid mb-5"
-            src="./images/apply-page-img.png"
+            src="./assets/img/apply-page-img.png"
             alt="Photo by Aaron Burden on Unsplash"
           />
         </div>
@@ -198,13 +195,37 @@
 
         <h5>Upload Cv</h4>
         <div class="custom-file mb-3">
-          <input type="file" class="custom-file-input" id="customFile" onchange="uploadFile(this.files)" />
+          <!-- <input type="file" required class="custom-file-input" id="customFile" onchange="uploadFile(this.files)" /> -->
+          <input type="file" required class="custom-file-input" id="resume-file" />
           <label class="custom-file-label" for="customFile">Choose file</label>
         </div>
         <input class="btn btn-primary" type="submit" value="submit" />
       </form>
     </div>
     <!--End of Form input-->
+
+    
+    <!-- Modal -->
+  <div class="modal fade" id="apply-success-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Thank you for applying!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Your application is now in the process of being reviewed.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End of Modal -->
+
 
     <!-- Footer -->
     <div class="footer-dark">

@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", event => {
   // displayContactPosts();
 });
 
+let currentFile = null;
+
 const googleLogin = () => {
   const provider = new firebase.auth.GoogleAuthProvider();
   firebase
@@ -49,6 +51,10 @@ const applicationSubmit = () => {
   let lastName = $("#apply-lastName").val();
   let email = $("#apply-email").val();
 
+  let resumeFile = document.getElementById("resume-file").files[0];
+
+  
+
   let db = firebase.firestore();
 
   db.collection("applicants")
@@ -65,32 +71,29 @@ const applicationSubmit = () => {
       console.error("Error writing document: ", error);
     });
 
-  document.getElementById("apply-submit").reset();
+    //uploading file that was saved to global variable
+
+    const storageRef = firebase.storage().ref();
+    const resumeRef = storageRef.child(`resume-${email}`);
+
+    const file = resumeFile;
+
+    const task = resumeRef.put(file);
+
+    task.then(snapshot => {
+      console.log(snapshot);
+      console.log(snapshot.downloadURL);
+      $('#apply-success-modal').modal('show');
+      document.getElementById("apply-submit").reset();
+    });
+
+
+  // this.currentFile = null;
+
+
+  //Reset form fields after submission
+
 };
 
-function uploadFile(files) {
-  const storageRef = firebase.storage().ref();
-  const resumeRef = storageRef.child("resume.doc");
 
-  const file = files.item(0);
 
-  const task = resumeRef.put(file);
-
-  task.then(snapshot => {
-    console.log(snapshot);
-    console.log(snapshot.downloadURL);
-  });
-}
-
-const displayContactPosts = () => {
-  const db = firebase.firestore();
-
-  const contactPosts = db.collection("contact-messages").doc("test-contact");
-
-  contactPosts.get().then(doc => {
-    const data = doc.data();
-    document.write(data.name + `<br>`);
-    document.write(data.email + `<br>`);
-    document.write(data.message + `<br>`);
-  });
-};
