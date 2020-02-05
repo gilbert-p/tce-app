@@ -1,0 +1,35 @@
+#dashboard-title {
+  color: white;
+}
+
+.nav-link {
+  color: white;
+}
+
+.active {
+  background-color: #049ef4;
+  border-radius: 10px;
+}
+
+.card-container {
+  border-radius: 10px;
+}
+
+.name-box {
+  width: 175px;
+}
+
+.message-box {
+  max-height: 150px;
+  word-wrap: break-word;
+}
+
+.status-complete {
+  font-weight: bold;
+  color: lightgreen;
+}
+
+.status-incomplete {
+  font-weight: bold;
+  color: red;
+}
