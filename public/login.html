@@ -18,6 +18,17 @@
     <link rel="stylesheet" href="assets/css/Log-In.css">
 
     <link rel="stylesheet" href="index.css">
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/7.8.0/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/7.8.0/firebase-auth.js"></script>
+    <script defer src="/__/firebase/7.8.0/firebase-database.js"></script>
+    <script defer src="/__/firebase/7.8.0/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/7.8.0/firebase-storage.js"></script>
+    <script defer src="/__/firebase/7.8.0/firebase-firestore.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
 </head>
 <body>
 <!-- Nav Bar -->
@@ -63,15 +74,27 @@
 </nav>
 <!--Nav End-->
     <!-- Log In -->
-    <div class="login-clean">
-        <form method="post">
+    <!-- <div class="login-clean">
+        <form action="Javascript:app:adminLogin()">
             <h2 class="sr-only">Login Form</h2>
             <p class="login-admin-tittle">Admin</p>
             <div class="illustration"><i class="fas fa-shuttle-van"></i></div>
-            <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email"></div>
-            <div class="form-group"><input class="form-control" type="password" name="password" placeholder="Password"></div>
-            <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Log In</button></div><a class="forgot" href="#">Forgot your email or password?</a></form>
+            <div class="form-group"><input id="login-email" class="form-control" type="email" name="email" placeholder="Email" required></div>
+            <div class="form-group"><input id="login-password" class="form-control" type="password" name="password" placeholder="Password" required></div>
+            <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Log In</button></div><a class="forgot" href="#">Forgot your email or password?</a>
+        </form>
+    </div> -->
+
+    <div class="login-clean m-5 d-flex justify-content-center">
+        <h2 class="">Login Form</h2>
+        <div class="illustration"><i class="fas fa-shuttle-van"></i></div>
+        <button onclick="Javascript:app:googleLogin()" class="login-btn d-flex justify-content-center">
+            <img src="./assets/img/google-button.png" alt="google-button-logo">
+            <span><strong>Login with Google</strong></span>
+        </button>
     </div>
+
+
     <!-- Log In End -->
 <!-- Footer -->
 <div class="footer-dark">
@@ -105,5 +128,9 @@
     </footer>
 </div>
 <!-- End Footer-->
+
+
+<script src="./assets/js/jquery.min.js"></script>
+<script src="./app.js"></script>
 </body>
 </html>

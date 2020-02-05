@@ -16,7 +16,6 @@ const googleLogin = () => {
     .signInWithPopup(provider)
     .then(result => {
       const user = result.user;
-      document.write(`Welcome ${user.displayName}`);
       console.log(user);
     })
     .catch(console.log);
