@@ -17,8 +17,12 @@ const googleLogin = () => {
     .then(result => {
       const user = result.user;
       console.log(user);
+
+      window.location = './index.html';
     })
     .catch(console.log);
+
+    
 };
 
 const contactSubmit = () => {
