@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", event => {
   console.log(app);
 });
 
+//User login using Google Auth
 const googleLogin = () => {
   const provider = new firebase.auth.GoogleAuthProvider();
   firebase
@@ -66,8 +67,6 @@ const applicationSubmit = () => {
       console.error("Error writing document: ", error);
     });
 
-  //uploading file that was saved to global variable
-
   const storageRef = firebase.storage().ref();
   const resumeRef = storageRef.child(`resume-${email}`);
 
@@ -79,10 +78,50 @@ const applicationSubmit = () => {
     console.log(snapshot);
     console.log(snapshot.downloadURL);
     $("#apply-success-modal").modal("show");
+
+    //Reset form fields after submission
     document.getElementById("apply-submit").reset();
   });
-
-  // this.currentFile = null;
-
-  //Reset form fields after submission
 };
+
+//Obtain the information of table row that is clicked on
+$("#applicants-table")
+  .find("tr")
+  .click(function() {
+    let table = document.getElementById("applicants-table");
+
+    //incrementing skips over the table header
+    let row_clicked_index = $(this).index() + 1;
+
+    //Assign the row values to the modal.
+    for (
+      let current_column = 0;
+      current_column < table.rows[row_clicked_index].cells.length;
+      current_column++
+    ) {
+      current_col_info =
+        table.rows[row_clicked_index].cells[current_column].innerHTML;
+
+      switch (current_column) {
+        case 0:
+          $("#applicant-name").text(current_col_info);
+          break;
+        case 1:
+          $("#applicant-email").text(current_col_info);
+          break;
+        case 2:
+          $("#applicant-position").text(current_col_info);
+          break;
+        case 3:
+          $("#applicant-date-applied").text(current_col_info);
+          break;
+        case 4:
+          $("#applicant-status").text(current_col_info);
+          break;
+      }
+    }
+
+    //Shows modal after setting user values
+
+    $("#applicant-view-modal").modal("show");
+  });

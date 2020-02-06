@@ -130,8 +130,7 @@
 
           <h2>Applicants</h2>
           <div class="table-responsive">
-            <table class="table table-striped table-md">
-              <thead>
+            <table id="applicants-table" class="table table-striped table-md">
                 <tr>
                   <th>Name</th>
                   <th>Email</th>
@@ -139,13 +138,12 @@
                   <th>Date Applied</th>
                   <th>Status</th>
                 </tr>
-              </thead>
               <tbody>
                 <tr>
                   <td>John Smith</td>
                   <td>john@smith.com</td>
                   <td>Delivery Driver</td>
-                  <td>1/01/2020</td>
+                  <td >1/01/2020</td>
                   <td class="status-incomplete">Incomplete</td>
                 </tr>
                 <tr>
@@ -220,5 +218,45 @@
         </main>
       </div>
     </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="applicant-view-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="applicant-name">Thank you for applying!</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p id="applicant-email"></p>
+            <p id="applicant-position"></p>
+            <p id="applicant-date-applied"></p>
+            <p id="applicant-status"></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End of Modal -->
+
+    <script src="./assets/js/jquery.min.js"></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"
+  ></script>
+
+    <script src="./app.js" defer></script>
   </body>
 </html>

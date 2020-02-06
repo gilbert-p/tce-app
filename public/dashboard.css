@@ -33,3 +33,16 @@
   font-weight: bold;
   color: red;
 }
+
+#applicants-table tr:hover {
+  background-color: #ddd;
+  cursor: pointer !important;
+}
+
+#applicants-table th {
+  background-color: white;
+}
+
+#applicants-table th:hover {
+  cursor: default;
+}
