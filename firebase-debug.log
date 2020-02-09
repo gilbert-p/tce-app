@@ -1,0 +1,25 @@
+[debug] [2020-02-09T05:08:51.186Z] ----------------------------------------------------------------------
+[debug] [2020-02-09T05:08:51.188Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\User\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2020-02-09T05:08:51.188Z] CLI Version:   7.12.1
+[debug] [2020-02-09T05:08:51.188Z] Platform:      win32
+[debug] [2020-02-09T05:08:51.188Z] Node Version:  v12.14.1
+[debug] [2020-02-09T05:08:51.189Z] Time:          Sat Feb 08 2020 21:08:51 GMT-0800 (Pacific Standard Time)
+[debug] [2020-02-09T05:08:51.189Z] ----------------------------------------------------------------------
+[debug] [2020-02-09T05:08:51.189Z] 
+[debug] [2020-02-09T05:08:51.203Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-02-09T05:08:51.204Z] > authorizing via signed-in user
+[debug] [2020-02-09T05:08:51.204Z] [iam] checking project tce-website-app for permissions ["firebase.projects.get"]
+[debug] [2020-02-09T05:08:51.206Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/tce-website-app:testIamPermissions  
+
+[debug] [2020-02-09T05:08:51.611Z] <<< HTTP RESPONSE 200
+[debug] [2020-02-09T05:08:51.613Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/tce-website-app  
+ 
+[debug] [2020-02-09T05:08:52.024Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'D:\Web Projects\Temple_Culberson_Enterprises\tce-app'...
+[info] 
+[debug] [2020-02-09T05:08:52.026Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/tce-website-app/webApps/-/config  
+ 
+[debug] [2020-02-09T05:08:52.377Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
