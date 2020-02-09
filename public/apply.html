@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <!-- Mobile View -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/7.8.0/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/7.8.0/firebase-auth.js"></script>
+    <script defer src="/__/firebase/7.8.0/firebase-database.js"></script>
+    <script defer src="/__/firebase/7.8.0/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/7.8.0/firebase-storage.js"></script>
+    <script defer src="/__/firebase/7.8.0/firebase-firestore.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+
+    <!-- Css Files Added -->
+    <!--Footer CSS -->
+    <link rel="stylesheet" href="assets/css/Footer-Dark.css" />
+    <link rel="stylesheet" href="assets/css/Team-Boxed.css" />
+
+    <!-- Bootstrap CSS Sources-->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css" />
+
+    <link rel="stylesheet" href="./index.css" />
+
+    <link rel="stylesheet" href="./apply.css" />
+
+    <title>Company Team</title>
+  </head>
+  <body>
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">
+        <img src="./assets/img/tce_logo/TCE_LOGO@sm.png" alt="tce_logo" />
+      </a>
+      <button
+        class="navbar-toggler collapsed"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarsExample03"
+        aria-controls="navbarsExample03"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="navbar-collapse collapse" id="navbarsExample03">
+        <h3 id="title_name" class="mx-5">Temple Culberson Enterprises</h3>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./company.html">Company</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./newsletter.html">Newsletter</a>
+          </li>
+          <div class="dropdown show">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              id="dropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Careers
+            </a>
+
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="./careers.html">All Jobs</a>
+              <a class="dropdown-item" href="./careers.html"
+                >Last Mile Delivery</a
+              >
+              <a class="dropdown-item" href="./careers.html">Relay Driver</a>
+            </div>
+          </div>
+          <li class="nav-item">
+            <a class="nav-link" href="./contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!--Nav End-->
+
+    <div id="apply-img-container" class="container">
+      <div class="row">
+        <div class="col-12">
+          <img
+            class="img-fluid mb-5"
+            src="./assets/img/apply-page-img.png"
+            alt="Photo by Aaron Burden on Unsplash"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="col-md-12 blog-main">
+        <div class="blog-post">
+          <h3 class="blog-post-title">Job Title</h3>
+          <h4 id="job-title" class="mx-5 my-3">Delivery Driver</h4>
+
+          <h3 class="blog-post-title">Job Description</h3>
+          <p class="mx-5">
+            Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis
+            vestibulum. Sed posuere consectetur est at lobortis. Cras mattis
+            consectetur purus sit amet fermentum.Aenean eu leo quam.
+            Pellentesque ornare sem lacinia quam venenatis vestibulum.
+          </p>
+          <hr />
+          <h3 class="blog-post-title">Location</h3>
+          <p class="mx-5">
+            Pellentesque ornare sem lacinia quam venenatis vestibulum.
+          </p>
+          <hr />
+
+          <h3 class="blog-post-title">Requirements</h3>
+          <ul class="mx-4">
+            <li>
+              Praesent commodo cursus magna, vel scelerisque nisl consectetur
+              et.
+            </li>
+            <li>Donec id elit non mi porta gravida at eget metus.</li>
+            <li>Nulla vitae elit libero, a pharetra augue.</li>
+            <li>Nulla vitae elit libero, a pharetra augue.</li>
+          </ul>
+          <hr />
+          <h3 class="blog-post-title">Compensation and Scheduling</h3>
+          <ul class="mx-4">
+            <li>
+              Praesent commodo cursus magna, vel scelerisque nisl consectetur
+              et.
+            </li>
+            <li>Donec id elit non mi porta gravida at eget metus.</li>
+            <li>Nulla vitae elit libero, a pharetra augue.</li>
+            <li>Nulla vitae elit libero, a pharetra augue.</li>
+          </ul>
+          <hr />
+        </div>
+        <!-- /.blog-post -->
+      </div>
+    </div>
+    <!--End of Job Description-->
+
+    <div id="apply-form" class="container my-5">
+      <form id="apply-submit" action="Javascript:app:noResumeApply()">
+        <div class="form-row">
+          <div class="col-md-4 mb-3">
+            <label for="apply-firstName">First name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="apply-firstName"
+              placeholder="First name"
+              required
+            />
+            <div class="invalid-feedback">
+              Please enter a first name.
+            </div>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-3">
+            <label for="apply-lastName">Last name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="apply-lastName"
+              placeholder="Last name"
+              required
+            />
+            <div class="invalid-feedback">
+              Please enter a last name.
+            </div>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="col-md-6 mb-3">
+            <label for="apply-email">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="apply-email"
+              placeholder="email@example.com"
+              required
+            />
+            <div class="invalid-feedback">
+              Please provide a valid email.
+            </div>
+          </div>
+        </div>
+
+        <!-- <h5>Upload Cv</h4>
+        <div class="custom-file mb-3">
+          <input type="file" required class="custom-file-input" id="resume-file" />
+          <label class="custom-file-label" for="customFile">Choose file</label>
+        </div> -->
+        <input class="btn btn-primary" type="submit" value="submit" />
+      </form>
+    </div>
+    <!--End of Form input-->
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="apply-success-modal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">
+              Thank you for applying!
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Your application is now in the process of being reviewed.
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End of Modal -->
+
+    <!-- Footer -->
+    <div class="footer-dark">
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6 col-md-3 item">
+              <h3>Careers</h3>
+              <ul>
+                <li><a href="./careers.html">Last Mile Delivery</a></li>
+                <li><a href="./careers.html">Relay Delivery</a></li>
+                <li><a href="./coming.html">Coming Soon ...</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-6 col-md-3 item">
+              <h3>About</h3>
+              <ul>
+                <li><a href="./company.html">Company</a></li>
+                <li><a href="./contact.html">Contact Us</a></li>
+                <li><a href="./login.html">Log In</a></li>
+              </ul>
+            </div>
+            <div class="col-md-6 item text">
+              <h3>Temple Culberson Enterprises LLC</h3>
+              <p>
+                Praesent sed lobortis mi. Suspendisse vel placerat ligula.
+                Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis
+                tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel
+                in justo.
+              </p>
+            </div>
+            <div class="col item social">
+              <a href="#"><i class="icon ion-social-facebook"></i></a
+              ><a href="#"><i class="icon ion-social-twitter"></i></a
+              ><a href="#"><i class="icon ion-social-snapchat"></i></a
+              ><a href="#"><i class="icon ion-social-instagram"></i></a>
+            </div>
+          </div>
+          <p class="copyright">Temple Culberson Enterprises LLC © 2020</p>
+        </div>
+      </footer>
+    </div>
+    <!-- End Footer-->
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
