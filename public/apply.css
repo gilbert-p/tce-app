@@ -39,6 +39,10 @@ h3 + ul {
   #values-overview {
     font-weight: 600;
     font-size: 16px;
+  }
+
+  .mr-5,
+  .mx-5 {
     margin-left: 1.2rem !important;
     margin-right: 1.2rem !important;
   }
