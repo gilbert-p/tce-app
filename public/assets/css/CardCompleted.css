@@ -1,0 +1,34 @@
+.applicants-card-details-info {
+    font-style: normal;
+}
+
+.applicants-card-details-fixed {
+    font-weight: bold;
+}
+
+.applicants-card-status-complete {
+    color: green;
+}
+
+.card.applicants-card-resume {
+    text-align: center!important;
+}
+
+.card-title.applicants-title-onboarding {
+    background-color: #24292e;
+    color: white;
+}
+
+.far.fa-file-alt.fa-5x.resume-asset {
+    padding: 50px;
+}
+
+.row.onboarding-status {
+    margin-top: 20px;
+}
+
+.card.card-onboarding {
+    border-radius: 20px;
+    border-width: 10px;
+}
+
