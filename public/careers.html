@@ -23,7 +23,7 @@
   </head>
   <body>
     <!-- Nav Bar -->
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
       <a class="navbar-brand" href="#">
         <img src="./assets/img/tce_logo/TCE_LOGO@sm.png" alt="tce_logo" />
       </a>
@@ -39,7 +39,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="navbar-collapse collapse" id="navbarsExample03" style="">
+      <div class="navbar-collapse collapse" id="navbarsExample03">
         <h3 id="title_name" class="mx-5">Temple Culberson Enterprises</h3>
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
@@ -53,16 +53,34 @@
           <li class="nav-item">
             <a class="nav-link" href="./newsletter.html">Newsletter</a>
           </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="./careers.html">Careers</a>
-          </li>
+          <div class="dropdown show">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              id="dropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Careers
+            </a>
 
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="./careers.html">All Jobs</a>
+              <a class="dropdown-item" href="./careers.html"
+                >Last Mile Delivery</a
+              >
+              <a class="dropdown-item" href="./careers.html">Relay Driver</a>
+            </div>
+          </div>
           <li class="nav-item">
             <a class="nav-link" href="./contact.html">Contact</a>
           </li>
         </ul>
       </div>
     </nav>
+
     <!--Nav End-->
 
     <img
@@ -186,9 +204,11 @@
             Consequatur labore voluptate eos architecto facilis a nobis porro
             enim, quae aliquid laudantium ab tenetur libero eaque!
           </p>
-          <div class="btn btn-primary">
-            Learn More &raquo
-          </div>
+          <a href="./newsletter.html">
+            <div class="btn btn-primary">
+              Learn More &raquo
+            </div>
+          </a>
         </div>
       </div>
     </div>
@@ -196,9 +216,11 @@
     <section class="jumbotron text-center">
       <div class="container">
         <h1 class="jumbotron-heading">Questions?</h1>
-        <div class="btn btn-primary">
-          Contact us today!
-        </div>
+        <a href="./contact.html">
+          <div id="CTA" class="btn btn-primary">
+            Contact us today!
+          </div></a
+        >
       </div>
     </section>
     <!-- Footer -->
@@ -246,6 +268,8 @@
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="./assets/js/jquery.min.js"></script>
+
+    <script src="./assets/bootstrap/js/bootstrap.min.js"></script>
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"

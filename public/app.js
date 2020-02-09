@@ -42,6 +42,7 @@ const contactSubmit = () => {
     });
 
   document.getElementById("contact-form").reset();
+  window.location = "./index.html";
 };
 
 const applicationSubmit = () => {
@@ -84,13 +85,37 @@ const applicationSubmit = () => {
   });
 };
 
+const noResumeApply = () => {
+  let firstName = $("#apply-firstName").val();
+  let lastName = $("#apply-lastName").val();
+  let email = $("#apply-email").val();
+
+  let db = firebase.firestore();
+
+  db.collection("applicants")
+    .doc(email)
+    .set({
+      firstName: firstName,
+      lastName: lastName,
+      email: email
+    })
+    .then(function() {
+      console.log("Document successfully written!");
+      document.getElementById("apply-submit").reset();
+      $("#apply-success-modal").modal("show");
+    })
+    .catch(function(error) {
+      console.error("Error writing document: ", error);
+    });
+};
+
 //Obtain the information of table row that is clicked on
 $("#applicants-table")
   .find("tr")
   .click(function() {
     let table = document.getElementById("applicants-table");
 
-    //incrementing skips over the table header
+    //increment over table header
     let row_clicked_index = $(this).index() + 1;
 
     //Assign the row values to the modal.

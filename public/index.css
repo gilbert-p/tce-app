@@ -14,6 +14,22 @@ body {
   padding: 0;
 }
 
+#dropdownMenuLink {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+#CTA:hover {
+  cursor: pointer;
+}
+
+.basic-jumbotron {
+  background-color: white;
+}
+
+#company-mision-statement {
+  font-size: 28px;
+}
+
 @media (min-width: 960px) {
   #title_name {
     font-size: 1.5rem;

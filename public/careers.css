@@ -36,3 +36,11 @@
   margin-bottom: 50px;
   width: 100vw;
 }
+
+#dropdownMenuLink {
+  color: white;
+}
+
+a:link {
+  text-decoration: none;
+}

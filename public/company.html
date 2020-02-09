@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/fonts/ionicons.min.css" />
 
-    <link rel="stylesheet" href="index.css"/>
+    <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="company.css" />
 
     <title>Company Team</title>
@@ -40,7 +40,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="navbar-collapse collapse" id="navbarsExample03" style="">
+      <div class="navbar-collapse collapse" id="navbarsExample03">
         <h3 id="title_name" class="mx-5">Temple Culberson Enterprises</h3>
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
@@ -48,22 +48,40 @@
               >Home <span class="sr-only">(current)</span></a
             >
           </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="./company.html">Company</a>
+          <li class="nav-item">
+            <a class="nav-link active" href="./company.html">Company</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="./newsletter.html">Newsletter</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./careers.html">Careers</a>
-          </li>
+          <div class="dropdown show">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              id="dropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Careers
+            </a>
 
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="./careers.html">All Jobs</a>
+              <a class="dropdown-item" href="./careers.html"
+                >Last Mile Delivery</a
+              >
+              <a class="dropdown-item" href="./careers.html">Relay Driver</a>
+            </div>
+          </div>
           <li class="nav-item">
             <a class="nav-link" href="./contact.html">Contact</a>
           </li>
         </ul>
       </div>
     </nav>
+
     <!--Nav End-->
 
     <div id="team-img-container" class="container">
@@ -191,6 +209,8 @@
     <!-- End Footer-->
 
     <script src="./assets/js/jquery.min.js"></script>
+
+    <script src="./assets/bootstrap/js/bootstrap.min.js"></script>
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"

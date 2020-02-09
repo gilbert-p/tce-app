@@ -28,8 +28,9 @@
 #form-container {
   padding: 30px;
   width: 950px;
-  height: 300px;
+  height: 320px;
   background-color: #f1f1f1;
+  border-radius: 15px;
 }
 
 #contact-us {
@@ -63,7 +64,7 @@ textarea {
 }
 
 #newsletter-ad {
-  margin-top: 100px;
+  margin-top: 50px;
   background-color: #e2e2e2;
   margin-bottom: 50px;
   width: 100vw;
@@ -72,5 +73,11 @@ textarea {
 @media (min-width: 1200px) {
   .container {
     max-width: 1690px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .cool-btn {
+    left: 500px;
   }
 }

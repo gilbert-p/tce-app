@@ -67,16 +67,34 @@
           <li class="nav-item">
             <a class="nav-link" href="./newsletter.html">Newsletter</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./careers.html">Careers</a>
-          </li>
+          <div class="dropdown show">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              id="dropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Careers
+            </a>
 
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="./careers.html">All Jobs</a>
+              <a class="dropdown-item" href="./careers.html"
+                >Last Mile Delivery</a
+              >
+              <a class="dropdown-item" href="./careers.html">Relay Driver</a>
+            </div>
+          </div>
           <li class="nav-item">
             <a class="nav-link" href="./contact.html">Contact</a>
           </li>
         </ul>
       </div>
     </nav>
+
     <!--Nav End-->
 
     <div id="apply-img-container" class="container">
@@ -95,7 +113,7 @@
       <div class="col-md-12 blog-main">
         <div class="blog-post">
           <h3 class="blog-post-title">Job Title</h3>
-          <h4 id="job-title" class="mx-5">Delivery Driver</h4>
+          <h4 id="job-title" class="mx-5 my-3">Delivery Driver</h4>
 
           <h3 class="blog-post-title">Job Description</h3>
           <p class="mx-5">
@@ -140,7 +158,7 @@
     <!--End of Job Description-->
 
     <div id="apply-form" class="container my-5">
-      <form id="apply-submit" action="Javascript:app:applicationSubmit()">
+      <form id="apply-submit" action="Javascript:app:noResumeApply()">
         <div class="form-row">
           <div class="col-md-4 mb-3">
             <label for="apply-firstName">First name</label>
@@ -193,39 +211,56 @@
           </div>
         </div>
 
-        <h5>Upload Cv</h4>
+        <!-- <h5>Upload Cv</h4>
         <div class="custom-file mb-3">
-          <!-- <input type="file" required class="custom-file-input" id="customFile" onchange="uploadFile(this.files)" /> -->
           <input type="file" required class="custom-file-input" id="resume-file" />
           <label class="custom-file-label" for="customFile">Choose file</label>
-        </div>
+        </div> -->
         <input class="btn btn-primary" type="submit" value="submit" />
       </form>
     </div>
     <!--End of Form input-->
 
-    
     <!-- Modal -->
-  <div class="modal fade" id="apply-success-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLongTitle">Thank you for applying!</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          Your application is now in the process of being reviewed.
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    <div
+      class="modal fade"
+      id="apply-success-modal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">
+              Thank you for applying!
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Your application is now in the process of being reviewed.
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- End of Modal -->
-
+    <!-- End of Modal -->
 
     <!-- Footer -->
     <div class="footer-dark">

@@ -48,7 +48,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="navbar-collapse collapse" id="navbarsExample03" style="">
+      <div class="navbar-collapse collapse" id="navbarsExample03">
         <h3 id="title_name" class="mx-5">Temple Culberson Enterprises</h3>
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
@@ -62,16 +62,34 @@
           <li class="nav-item">
             <a class="nav-link" href="./newsletter.html">Newsletter</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./careers.html">Careers</a>
-          </li>
+          <div class="dropdown show">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              id="dropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Careers
+            </a>
 
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="./careers.html">All Jobs</a>
+              <a class="dropdown-item" href="./careers.html"
+                >Last Mile Delivery</a
+              >
+              <a class="dropdown-item" href="./careers.html">Relay Driver</a>
+            </div>
+          </div>
           <li class="nav-item active">
             <a class="nav-link" href="./contact.html">Contact</a>
           </li>
         </ul>
       </div>
     </nav>
+
     <!--Nav End-->
 
     <h2 id="contact-us">
@@ -95,55 +113,45 @@
             nobis!
           </p>
         </div>
-        <div id="form-container" class="col-7">
-          <div class="container">
+        <div id="form-container">
+          <form id="contact-form" action="Javascript:app:contactSubmit()">
             <div class="row">
-              <div class="col-6">
-                <form
-                  id="contact-form"
-                  action="Javascript:app:contactSubmit()"
-                  class="form-signin mt-4"
-                >
-                  <div class="form-label-group">
-                    <input
-                      type="text"
-                      id="inputName"
-                      class="form-control"
-                      placeholder="Name"
-                    />
-                    <label for="inputName"></label>
-                  </div>
-                  <div class="form-label-group mt-1">
-                    <input
-                      type="email"
-                      id="inputEmail"
-                      class="form-control"
-                      placeholder="Email"
-                    />
-                    <label for="inputEmail"></label>
-                  </div>
-                  <div class="col-6">
-                    <div class="form-group">
-                      <label for="exampleFormControlTextarea1"></label>
-                      <textarea
-                        class="form-control"
-                        id="messageInput"
-                        rows="5"
-                        cols="50"
-                        placeholder="Message"
-                      ></textarea>
-                    </div>
-                  </div>
-                  <input
-                    id="contact-submit"
-                    type="submit"
-                    class="cool-btn mt-3"
-                    value="submit"
-                  />
-                </form>
+              <div class="form-group col-6">
+                <label for="inputName">Name</label>
+                <input
+                  type="text"
+                  id="inputName"
+                  class="form-control"
+                  placeholder="Name"
+                />
               </div>
+              <div class="form-group col-6">
+                <label for="inputName">Email</label>
+                <input
+                  type="email"
+                  id="inputEmail"
+                  class="form-control"
+                  placeholder="name@example.com"
+                />
+              </div>
+
+              <div class="form-group col-12">
+                <label for="messageInput">Message</label>
+                <textarea
+                  class="form-control"
+                  id="messageInput"
+                  rows="3"
+                ></textarea>
+              </div>
+
+              <input
+                id="contact-submit"
+                type="submit"
+                class="cool-btn mt-3"
+                value="submit"
+              />
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </div>
@@ -166,9 +174,11 @@
             Consequatur labore voluptate eos architecto facilis a nobis porro
             enim, quae aliquid laudantium ab tenetur libero eaque!
           </p>
-          <div class="btn btn-primary">
-            Learn More &raquo
-          </div>
+          <a href="./newsletter.html">
+            <div class="btn btn-primary">
+              Learn More &raquo
+            </div>
+          </a>
         </div>
       </div>
     </div>
@@ -217,6 +227,8 @@
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="./assets/js/jquery.min.js"></script>
+
+    <script src="./assets/bootstrap/js/bootstrap.min.js"></script>
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"

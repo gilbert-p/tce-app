@@ -29,6 +29,10 @@
   filter: grayscale(100%);
 }
 
-.rounded-circle:hover {
+.team-boxed .item img {
+  max-width: 200px;
+}
+
+.box:hover > .rounded-circle {
   filter: grayscale(0%);
 }
