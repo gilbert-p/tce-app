@@ -37,6 +37,10 @@
   width: 100vw;
 }
 
+.basic-jumbotron {
+  background-color: white;
+}
+
 #dropdownMenuLink {
   color: white;
 }

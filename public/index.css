@@ -12,6 +12,13 @@ body {
   background-color: #242628;
   color: white;
   padding: 0;
+  height: 400px;
+  overflow: hidden;
+}
+
+#company-mission-img {
+  position: relative;
+  top: -120px;
 }
 
 #dropdownMenuLink {
@@ -27,7 +34,7 @@ body {
 }
 
 #company-mision-statement {
-  font-size: 28px;
+  font-size: 24px;
 }
 
 @media (min-width: 960px) {
@@ -52,4 +59,9 @@ body {
   #title_name {
     font-size: 1rem;
   }
+}
+
+@media (min-width: 576px){
+  .jumbotron {
+    padding: 2rem 2rem;
 }
