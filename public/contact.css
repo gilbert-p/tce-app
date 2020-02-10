@@ -1,16 +1,14 @@
 #contact-container {
-  /* margin-left: 115px; */
 }
 
 #contact-detail {
   width: 100%;
-  height: 300px;
+  height: 250px;
   margin-top: 30px;
-  margin-bottom: 100px;
 }
 
 #contact-img {
-  margin-bottom: 200px;
+  margin-bottom: 75px;
 }
 
 #contact-title {
@@ -27,21 +25,17 @@
 
 #form-container {
   padding: 30px;
-  width: 950px;
-  height: 320px;
   background-color: #f1f1f1;
   border-radius: 15px;
 }
 
-#contact-us {
-  position: absolute;
-  height: auto;
-  width: auto;
-  top: 450px;
+#contact-us-header {
+  position: fixed;
+  top: 250px;
   left: 115px;
-  color: white;
+  font-size: 2.5em;
   font-weight: bold;
-  font-size: 50px;
+  color: red;
 }
 
 textarea {
@@ -70,14 +64,12 @@ textarea {
   width: 100vw;
 }
 
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1690px;
-  }
+#newsletter-img {
+  overflow: hidden;
 }
 
-@media (max-width: 1000px) {
-  .cool-btn {
-    left: 500px;
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
   }
 }
