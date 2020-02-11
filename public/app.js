@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", event => {
   const app = firebase.app();
 
-  console.log(app);
+  retrieveApplicants();
 });
 
 //User login using Google Auth
@@ -150,3 +150,39 @@ $("#applicants-table")
 
     $("#applicant-view-modal").modal("show");
   });
+
+const retrieveApplicants = () => {
+  var db = firebase.firestore();
+
+  let table = document.getElementById("applicants-table");
+
+  let table_row_length = document.getElementById("applicants-table").rows
+    .length;
+
+  db.collection("applicants")
+    .get()
+    .then(querySnapshot => {
+      querySnapshot.forEach(doc => {
+        // addListItem(doc.data().title, doc.data().description);
+        // console.log(
+        //   `${doc.data().firstName} ${doc.data().email} ${doc.data().lastName}`
+        // );
+
+        let applicant_row = table.insertRow(table_row_length);
+
+        let name_cell = applicant_row.insertCell(0);
+        let email_cell = applicant_row.insertCell(1);
+        let position_cell = applicant_row.insertCell(2);
+        let date_applied_cell = applicant_row.insertCell(3);
+        let status_cell = applicant_row.insertCell(4);
+
+        name_cell.innerHTML = `
+        ${doc.data().firstName} ${doc.data().lastName}`;
+
+        email_cell.innerHTML = doc.data().email;
+        position_cell.innerHTML = "Delivery Driver";
+        date_applied_cell.innerHTML = "1/01/2020";
+        status_cell.innerHTML = "Complete";
+      });
+    });
+};
