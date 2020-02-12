@@ -2,7 +2,8 @@
 document.addEventListener("DOMContentLoaded", event => {
   const app = firebase.app();
 
-  retrieveApplicants();
+  //load applicant information from server
+  // retrieveApplicants();
 });
 
 //User login using Google Auth
@@ -67,28 +68,14 @@ const applicationSubmit = () => {
     .catch(function(error) {
       console.error("Error writing document: ", error);
     });
-
-  const storageRef = firebase.storage().ref();
-  const resumeRef = storageRef.child(`resume-${email}`);
-
-  const file = resumeFile;
-
-  const task = resumeRef.put(file);
-
-  task.then(snapshot => {
-    console.log(snapshot);
-    console.log(snapshot.downloadURL);
-    $("#apply-success-modal").modal("show");
-
-    //Reset form fields after submission
-    document.getElementById("apply-submit").reset();
-  });
 };
 
 const noResumeApply = () => {
   let firstName = $("#apply-firstName").val();
   let lastName = $("#apply-lastName").val();
   let email = $("#apply-email").val();
+  let phoneNumber = removeNonNumericCharacters($("#phone-number").val());
+  let resumeFile = document.getElementById("resume-file").files[0];
 
   let db = firebase.firestore();
 
@@ -97,16 +84,38 @@ const noResumeApply = () => {
     .set({
       firstName: firstName,
       lastName: lastName,
-      email: email
+      email: email,
+      phoneNumber: phoneNumber
     })
     .then(function() {
-      console.log("Document successfully written!");
-      document.getElementById("apply-submit").reset();
-      $("#apply-success-modal").modal("show");
+      console.log("IWHBYD");
     })
     .catch(function(error) {
       console.error("Error writing document: ", error);
     });
+
+  if (resumeFile) {
+    const storageRef = firebase.storage().ref();
+    const resumeRef = storageRef.child(`resume:${email}`);
+
+    const file = resumeFile;
+
+    const task = resumeRef.put(file);
+
+    task.then(snapshot => {
+      console.log(snapshot);
+      console.log(snapshot.downloadURL);
+      $("#apply-success-modal").modal("show");
+
+      //Reset form fields after submission
+      document.getElementById("apply-submit").reset();
+    });
+  } else {
+    $("#apply-success-modal").modal("show");
+
+    //Reset form fields after submission
+    document.getElementById("apply-submit").reset();
+  }
 };
 
 //Obtain the information of table row that is clicked on
@@ -185,4 +194,8 @@ const retrieveApplicants = () => {
         status_cell.innerHTML = "Complete";
       });
     });
+};
+
+const removeNonNumericCharacters = string => {
+  return string.replace(/\D/g, "");
 };
