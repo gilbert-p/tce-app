@@ -144,17 +144,28 @@
               <tr>
                 <th>Name</th>
                 <th>Email</th>
+                <th>Phone Number</th>
                 <th>Position</th>
                 <th>Date Applied</th>
                 <th>Status</th>
               </tr>
               <tbody>
-                <tr>
+                <tr id="john@smith.com">
                   <td>John Smith</td>
                   <td>john@smith.com</td>
+                  <td>(123) 456-7890</td>
                   <td>Delivery Driver</td>
                   <td>1/01/2020</td>
-                  <td class="status-incomplete">Incomplete</td>
+                  <td id="onboarding-status" class="status-incomplete">
+                    Incomplete
+                  </td>
+                </tr>
+                <tr>
+                  <td>Mike Mo</td>
+                  <td>moskates@example.com</td>
+                  <td>Relay Driver</td>
+                  <td>1/01/2020</td>
+                  <td class="status-complete">Complete</td>
                 </tr>
                 <!-- <tr>
                     <td>Mike Mo</td>
@@ -258,14 +269,86 @@
             <p id="applicant-date-applied"></p>
             <p id="applicant-status"></p>
           </div>
+
+          <!--Onboarding container-->
+          <div class="container">
+            <div class="row mb-3">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <label class="switch mx-2">
+                    <input type="checkbox" />
+                    <span class="slider round"></span>
+                  </label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    aria-label="Text input with checkbox"
+                    value="Complete Tasks"
+                    disabled
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="row mb-3">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <label class="switch mx-2">
+                    <input type="checkbox" />
+                    <span class="slider round"></span>
+                  </label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    aria-label="Text input with checkbox"
+                    value="Track Associate Tasks"
+                    disabled
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="row mb-3">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <label class="switch mx-2">
+                    <input type="checkbox" />
+                    <span class="slider round"></span>
+                  </label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    aria-label="Track Amazon Tasks"
+                    value="Complete Tasks"
+                    disabled
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Onboarding container end-->
+
           <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-dismiss="modal"
-            >
-              Close
-            </button>
+            <div class="container">
+              <div class="row">
+                <div class="col mr-3">
+                  Onboarding Status:
+                  <h4 id="onboarding-status" class="status-incomplete">
+                    Incomplete
+                  </h4>
+                </div>
+
+                <div class="col">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -286,6 +369,6 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="./app.js" defer></script>
+    <script src="./applicants.js"></script>
   </body>
 </html>
