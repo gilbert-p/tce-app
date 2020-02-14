@@ -36,3 +36,9 @@
 .box:hover > .rounded-circle {
   filter: grayscale(0%);
 }
+
+@media (max-width: 960px) {
+  .rounded-circle {
+    filter: grayscale(0%);
+  }
+}

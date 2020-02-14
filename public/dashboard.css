@@ -115,3 +115,7 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+
+#side-nav {
+  height: 100vh;
+}

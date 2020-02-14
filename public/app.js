@@ -79,13 +79,16 @@ const noResumeApply = () => {
 
   let db = firebase.firestore();
 
+  let current_date = getDate();
+
   db.collection("applicants")
     .doc(email)
     .set({
       firstName: firstName,
       lastName: lastName,
       email: email,
-      phoneNumber: phoneNumber
+      phoneNumber: phoneNumber,
+      dateApply: current_date
     })
     .then(function() {
       console.log("IWHBYD");
@@ -156,4 +159,13 @@ const retrieveApplicants = () => {
 
 const removeNonNumericCharacters = string => {
   return string.replace(/\D/g, "");
+};
+
+const getDate = () => {
+  const todayDate = new Date();
+  //months start at 0
+  let month = todayDate.getMonth() + 1;
+  let day = todayDate.getUTCDate();
+  let year = todayDate.getUTCFullYear();
+  return `${month}/${day}/${year}`;
 };

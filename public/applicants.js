@@ -1,21 +1,21 @@
-let applicants = [];
+// let applicants = [];
 
-applicants["john@smith.com"] = {
-  completeTasks: true,
-  associateTasks: false,
-  amazonTasks: false
-};
+// applicants["john@smith.com"] = {
+//   completeTasks: true,
+//   associateTasks: false,
+//   amazonTasks: false
+// };
 
-applicants["moskates@example.com"] = {
-  completeTasks: false,
-  associateTasks: true,
-  amazonTasks: false
-};
+// applicants["moskates@example.com"] = {
+//   completeTasks: false,
+//   associateTasks: true,
+//   amazonTasks: false
+// };
 
 document.addEventListener("DOMContentLoaded", event => {
-  //   const app = firebase.app();
-  //   //load applicant information from server
-  //   retrieveApplicants();
+  const app = firebase.app();
+  //load applicant information from server
+  retrieveApplicants();
 });
 
 const removeNonNumericCharacters = string => {
@@ -63,10 +63,10 @@ const retrieveApplicants = () => {
           String(doc.data().phoneNumber)
         );
         position_cell.innerHTML = "Delivery Driver";
-        date_applied_cell.innerHTML = "1/01/2020";
-        status_cell.innerHTML = "Complete";
+        date_applied_cell.innerHTML = doc.data().dateApply;
+        status_cell.innerHTML = "Pending";
 
-        status_cell.className = "status-complete";
+        status_cell.className = "status-incomplete";
         ////////////////////////////////////////////////////////////////////////////////
         $("#applicants-table")
           .find("tr")
@@ -74,7 +74,7 @@ const retrieveApplicants = () => {
             let table = document.getElementById("applicants-table");
 
             //increment over table header
-            let row_clicked_index = $(this).index() + 1;
+            let row_clicked_index = $(this).index();
 
             //Assign the row values to the modal.
             for (
@@ -113,7 +113,7 @@ const retrieveApplicants = () => {
 };
 
 ///TEST
-
+/*
 //Obtain the information of table row that is clicked on
 $("#applicants-table")
   .find("tr")
@@ -123,8 +123,8 @@ $("#applicants-table")
     //increment over table header
     let row_clicked_index = $(this).index() + 1;
 
-    let curr_email =
-      table.rows[row_clicked_index].cells[current_column].innerHTML;
+    // let curr_email =
+    //   table.rows[row_clicked_index].cells[current_column].innerHTML;
 
     //Assign the row values to the modal.
     for (
@@ -196,3 +196,5 @@ const checkStatus = () => {
       .addClass("status-incomplete");
   }
 };
+
+*/
