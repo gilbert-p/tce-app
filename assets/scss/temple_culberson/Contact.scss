@@ -1,0 +1,75 @@
+#contact-container {
+}
+
+#contact-detail {
+  width: 100%;
+  height: 250px;
+  margin-top: 30px;
+}
+
+#contact-img {
+  margin-bottom: 75px;
+}
+
+#contact-title {
+  font-size: 50px;
+}
+
+#contact-title::before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  width: 180px;
+  border-top: 3px solid #049ef4;
+}
+
+#form-container {
+  padding: 30px;
+  background-color: #f1f1f1;
+  border-radius: 15px;
+}
+
+#contact-us-header {
+  position: fixed;
+  top: 250px;
+  left: 115px;
+  font-size: 2.5em;
+  font-weight: bold;
+  color: red;
+}
+
+textarea {
+  resize: none;
+}
+
+.cool-btn {
+  position: relative;
+  background-color: #f1f1f1;
+  border-radius: 18px;
+  width: 175px;
+  height: 35px;
+  border-color: #049ef4;
+  left: 740px;
+}
+
+#newsletter-container {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+#newsletter-ad {
+  margin-top: 50px;
+  background-color: #e2e2e2;
+  margin-bottom: 50px;
+  width: 100vw;
+}
+
+#newsletter-img {
+  overflow: hidden;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}

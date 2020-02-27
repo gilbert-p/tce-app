@@ -1,0 +1,49 @@
+h3 + p {
+  font-size: 1.1em;
+}
+
+h3 + ul {
+  font-size: 1.1em;
+}
+
+#job-title {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+#apply-img-container {
+  position: relative;
+  max-width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+}
+
+#apply-form {
+  border: 3px solid black;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+#values-overview {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+@media (max-width: 420px) {
+  #job-title {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+
+  #values-overview {
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+  .mr-5,
+  .mx-5 {
+    margin-left: 1.2rem !important;
+    margin-right: 1.2rem !important;
+  }
+}

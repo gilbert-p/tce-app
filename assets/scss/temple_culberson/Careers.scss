@@ -1,0 +1,54 @@
+#header-info {
+  background-color: #242628;
+  color: white;
+  width: 100%;
+  font-size: 1.3rem;
+}
+
+#dsp-posting {
+  color: #049ef4;
+  font-weight: bold;
+}
+
+#dsp-posting:hover {
+  cursor: pointer;
+  background-color: #c4c4c4;
+}
+
+#relay-posting {
+  color: #e0441f;
+  font-weight: bold;
+}
+
+#relay-posting:hover {
+  cursor: pointer;
+  background-color: #c4c4c4;
+}
+
+#newsletter-container {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+#newsletter-ad {
+  margin-top: 100px;
+  background-color: #e2e2e2;
+  margin-bottom: 50px;
+  width: 100vw;
+}
+
+#newsletter-img {
+  overflow: hidden;
+}
+
+.basic-jumbotron {
+  background-color: white;
+}
+
+#dropdownMenuLink {
+  color: white;
+}
+
+a:link {
+  text-decoration: none;
+}
