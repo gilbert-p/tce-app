@@ -8,6 +8,8 @@
 #dsp-posting {
   color: #049ef4;
   font-weight: bold;
+  border-radius: 20px;
+  background-color: #d9dbdd;
 }
 
 #dsp-posting:hover {
@@ -51,4 +53,51 @@
 
 a:link {
   text-decoration: none;
+}
+
+.table .thead-dark th {
+  color: white;
+  font-size: 1.25em;
+}
+
+.table td,
+.table th {
+  font-size: 1em;
+  white-space: nowrap;
+  font-weight: bold;
+}
+
+.btn-neutral {
+  color: white;
+  background-color: #3d3d3d;
+}
+
+.container .gg-pen {
+  top: 3px;
+  color: black;
+  --ggs: 1.4;
+}
+
+.container .gg-file-document {
+  top: 3px;
+  color: black;
+  --ggs: 2;
+}
+
+.icon {
+  color: black;
+}
+
+@media screen and (max-width: 480px) {
+  .table .thead-dark th {
+    color: white;
+    font-size: 0.8125em;
+  }
+
+  .table td,
+  .table th {
+    font-size: 0.8125em;
+    white-space: nowrap;
+    font-weight: bold;
+  }
 }
