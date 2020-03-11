@@ -46,8 +46,9 @@ export default function Footer() {
             </div>
             <div className="col-md-6 item text">
               <h3>Temple Culberson Enterprises LLC</h3>
+              <h2 id="t-c-e">Trust, Commitment, Excellence</h2>
             </div>
-            <div className="col item social">
+            {/* <div className="col item social">
               <a href="#">
                 <i className="icon ion-social-facebook"></i>
               </a>
@@ -60,7 +61,7 @@ export default function Footer() {
               <a href="#">
                 <i className="icon ion-social-instagram"></i>
               </a>
-            </div>
+            </div> */}
           </div>
           <p className="copyright">Temple Culberson Enterprises LLC © 2020</p>
         </div>

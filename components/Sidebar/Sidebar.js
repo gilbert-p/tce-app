@@ -21,6 +21,8 @@ import { NavLink as NavLinkRRD, Link } from "react-router-dom";
 // nodejs library to set properties for components
 import { PropTypes } from "prop-types";
 
+import "../../assets/scss/temple_culberson/Custom_Sidebar.scss";
+
 // reactstrap components
 import {
   Button,
@@ -80,10 +82,12 @@ class Sidebar extends React.Component {
   };
   // creates the links that appear in the left menu / Sidebar
   createLinks = routes => {
+    console.log(routes);
     return routes.map((prop, key) => {
       return (
         <NavItem key={key}>
           <NavLink
+            id="nav-bruh"
             to={prop.layout + prop.path}
             tag={NavLinkRRD}
             onClick={this.closeCollapse}

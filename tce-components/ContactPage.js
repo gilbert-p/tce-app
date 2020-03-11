@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "../assets/scss/temple_culberson/Contact.scss";
-import Navbar from "./common/Navbar";
+import Navbar from "./common/Navbar2";
 import Footer from "./common/Footer";
 import HeaderImage from "./HeaderImage";
+import GoogleMaps from "./Map";
 import landing_page_img from "../assets/img/Photo by Ilya Pavlov on Unsplash.png";
-import MessageModal from "./common/MessageModal";
 import firebase from "../firebase.js";
 import Button from "react-bootstrap/Button";
 
@@ -91,19 +91,21 @@ const ContactPage = () => {
                       setMessage(e.currentTarget.value)
                     }></textarea>
                 </div>
-
-                <input
-                  className="form-control"
-                  id="contact-submit"
-                  type="submit"
-                  className="cool-btn mt-3"
-                  value="submit"
-                />
+                <div className="form-group">
+                  <input
+                    className="form-control"
+                    id="contact-submit"
+                    type="submit"
+                    className="cool-btn mt-3"
+                    value="submit"
+                  />
+                </div>
               </div>
             </form>
           </div>
         </div>
       </div>
+      <GoogleMaps />
       {/* <MessageModal setShowState={setShowState} /> */}
       <Footer />
     </>

@@ -67,7 +67,7 @@ class Admin extends React.Component {
           {...this.props}
           routes={routes}
           logo={{
-            innerLink: "/admin/index",
+            innerLink: "/admin/applicants",
             imgSrc: require("assets/img/tce_logo/TCE_LOGO.png"),
             imgAlt: "..."
           }}
@@ -79,7 +79,7 @@ class Admin extends React.Component {
           />
           <Switch>
             {this.getRoutes(routes)}
-            <Redirect from="*" to="/admin/index" />
+            <Redirect from="*" to="/admin/applicants" />
           </Switch>
           <Container fluid>
             <AdminFooter />

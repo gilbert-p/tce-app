@@ -1,6 +1,6 @@
 import React from "react";
 import "../assets/scss/temple_culberson/Apply.scss";
-import Navbar from "./common/Navbar";
+import Navbar from "./common/Navbar2";
 import Footer from "./common/Footer";
 import HeaderImage from "./HeaderImage";
 import ApplyForm from "./ApplyForm";

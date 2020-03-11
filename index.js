@@ -45,7 +45,8 @@ ReactDOM.render(
       <Route path="/admin" render={props => <AdminLayout {...props} />} />
       <Route path="/auth" render={props => <AuthLayout {...props} />} />
       <Redirect from="/" to="/tce" />
-      <Redirect from="/admin" to="/admin/tables" />
+      <Redirect from="/admin" to="/admin/applicants" />
+      {/* <Redirect from="/admin/index" to="/admin/tables" /> */}
       <Redirect from="/login" to="/auth/login" />
     </Switch>
   </BrowserRouter>,

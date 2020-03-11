@@ -1,6 +1,6 @@
 import React from "react";
 import "../assets/scss/temple_culberson/Landing-Page.scss";
-import Navbar from "./common/Navbar";
+import Navbar from "./common/Navbar2";
 import Footer from "./common/Footer";
 import HeaderImage from "./HeaderImage";
 import landing_page_img from "../assets/img/landing_page_img_blnk_lg.png";
@@ -12,7 +12,7 @@ export default function LandingPage() {
   return (
     <React.Fragment>
       <Navbar />
-      <HeaderImage source={landing_page_img} />
+      <HeaderImage source={landing_page_img} page="home" />
       <JumboSection
         jumbo_title="Amazon Delivery Service Partner"
         jumbo_body="Temple Culberson Enterprises is a dedicated DLA3 Amazon Delivery

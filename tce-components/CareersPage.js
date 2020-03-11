@@ -1,6 +1,6 @@
 import React from "react";
 import "../assets/scss/temple_culberson/Careers.scss";
-import Navbar from "./common/Navbar";
+import Navbar from "./common/Navbar2";
 import Footer from "./common/Footer";
 import HeaderImage from "./HeaderImage";
 import landing_page_img from "../assets/img/landing_page_img.png";
@@ -65,46 +65,72 @@ export default function CareersPage() {
         </div>
       </Link> */}
       <div className="table-responsive">
-        <Link to="/apply" className="nav-link">
-          <table class="table table-striped">
-            <thead class="thead-dark">
-              <tr>
-                <th scope="col"></th>
-                <th scope="col">Job Title</th>
-                <th scope="col">Location</th>
-                <th scope="col">Type</th>
-                <th scope="col">Date Posted</th>
-                <th scope="col"></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">
-                  <div className="d-inline-flex flex-row">
-                    <div className="icon container">
-                      <i class="gg-file-document"></i>
-                    </div>
-                    <div className="icon container">
-                      <i class="gg-pen"></i>
-                    </div>
+        <table className="table table-striped">
+          <thead className="thead-dark">
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">Job Title</th>
+              <th scope="col">Location</th>
+              <th scope="col">Type</th>
+              <th scope="col">Date Posted</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">
+                <div className=" d-inline-flex flex-row mt-4">
+                  <div className="icon container">
+                    <i class="gg-file-document"></i>
                   </div>
-                </th>
-                <td>Delivery Driver</td>
-                <td>DAX 7 South Gate</td>
-                <td>Last Mile Delivery</td>
-                <td>2/14/2020</td>
-                <td>
+                  <div className="icon container">
+                    <i class="gg-pen"></i>
+                  </div>
+                </div>
+              </th>
+              <td>Delivery Driver</td>
+              <td>DAX 7 South Gate</td>
+              <td>Last Mile Delivery</td>
+              <td>2/14/2020</td>
+              <td>
+                <Link to="/apply" className="nav-link">
                   <Button
-                    className="btn-neutral btn-icon"
+                    className="btn-apply-list btn-icon"
                     color="default"
                     href="#pablo">
                     <span className="btn-inner--text">Apply</span>
                   </Button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </Link>
+                </Link>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <div className=" d-inline-flex flex-row mt-4">
+                  <div className="icon container">
+                    <i class="gg-file-document"></i>
+                  </div>
+                  <div className="icon container">
+                    <i class="gg-pen"></i>
+                  </div>
+                </div>
+              </th>
+              <td>Relay Driver</td>
+              <td>DAX 7 South Gate</td>
+              <td>Last Mile Delivery</td>
+              <td>2/14/2020</td>
+              <td>
+                <Link to="/apply" className="nav-link">
+                  <Button
+                    className="btn-apply-list btn-icon"
+                    color="default"
+                    href="#pablo">
+                    <span className="btn-inner--text">Apply</span>
+                  </Button>
+                </Link>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
 
       <Footer />

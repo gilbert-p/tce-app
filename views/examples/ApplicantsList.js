@@ -1,24 +1,13 @@
 import React, { useEffect, useState } from "react";
 import firebase from "../../firebase.js";
-import {
-  Badge,
-  Card,
-  CardHeader,
-  CardFooter,
-  DropdownMenu,
-  DropdownItem,
-  UncontrolledDropdown,
-  DropdownToggle,
-  Media,
-  Pagination,
-  PaginationItem,
-  PaginationLink,
-  Progress,
-  Table,
-  Container,
-  Row,
-  UncontrolledTooltip
-} from "reactstrap";
+import ApplicantModal from "../../tce-components/common/MessageModal";
+import { Badge, Table } from "reactstrap";
+import classNames from "classnames";
+
+const badge_dot = {
+  width: "0.58rem",
+  height: "0.58rem"
+};
 
 function GetApplicants() {
   const [applicants, setApplicants] = useState([]);
@@ -40,11 +29,35 @@ function GetApplicants() {
   return applicants;
 }
 
-const ApplicantsList = () => {
-  const applicants = GetApplicants();
+function CheckApplicantStatus(applicant) {
+  const { status } = applicant;
+
+  const useForceUpdate = () => useState()[1];
+
+  let status_count = 0;
+  let applicant_status = false;
+
+  for (let status_item in status) {
+    if (Boolean(status[status_item])) {
+      status_count++;
+    }
+  }
+
+  if (status_count >= 6) {
+    console.log("Status Complete");
+    applicant_status = true;
+  }
+
+  return applicant_status;
+}
+
+const ApplicantsList = props => {
+  let applicants = GetApplicants();
+
+  console.log("ApplicantList");
 
   return (
-    <Table className="align-items-center table-flush" responsive>
+    <Table className="align-items-center table-flush table-striped" responsive>
       <thead className="thead-light">
         <tr>
           <th scope="col">Name</th>
@@ -56,30 +69,8 @@ const ApplicantsList = () => {
           <th scope="col" />
         </tr>
       </thead>
+      <tbody></tbody>
       <tbody>
-        {/* <tr>
-          <th scope="row">
-            <h3>John Doe</h3>
-          </th>
-          <td>
-            <h5>JohnDoe@email.com</h5>
-          </td>
-          <td>
-            <h5>(123)-456-7890</h5>
-          </td>
-          <td>
-            <h5>Last Mile Delivery</h5>
-          </td>
-          <td>
-            <h5>1/01/2020</h5>
-          </td>
-          <td>
-            <Badge color="" className="badge-dot mr-4">
-              <i className="bg-danger" />
-              Incomplete
-            </Badge>
-          </td>
-        </tr> */}
         {applicants.map(person => (
           <tr>
             <td>
@@ -98,10 +89,18 @@ const ApplicantsList = () => {
               <h5>{person.dateApply}</h5>
             </td>
             <td>
-              <Badge color="" className="badge-dot mr-4">
-                <i className="bg-warning" />
-                pending
-              </Badge>
+              {Boolean(CheckApplicantStatus(person)) ? (
+                <Badge color="" className="badge-dot mr-4">
+                  <i style={badge_dot} className="bg-success" />
+                  Complete
+                </Badge>
+              ) : (
+                <Badge color="" className="badge-dot">
+                  <i style={badge_dot} className="bg-danger" />
+                  Incomplete
+                </Badge>
+              )}
+              <ApplicantModal profile={person} />
             </td>
           </tr>
         ))}

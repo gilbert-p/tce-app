@@ -1,6 +1,6 @@
 import React from "react";
 import "../assets/scss/temple_culberson/Newsletter.scss";
-import Navbar from "./common/Navbar";
+import Navbar from "./common/Navbar2";
 import Footer from "./common/Footer";
 import HeaderImage from "./HeaderImage";
 import landing_page_img from "../assets/img/Photo by Aaron Burden on Unsplash.png";

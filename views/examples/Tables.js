@@ -15,7 +15,8 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React from "react";
+import React, { useEffect } from "react";
+import firebase from "../../firebase.js";
 
 // reactstrap components
 import {
@@ -42,6 +43,30 @@ import Header from "components/Headers/Header.js";
 import ApplicantsList from "./ApplicantsList.js";
 
 class Tables extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.applicant_length = 0;
+    this.count = 0;
+    this.state = {
+      number_of_applicants: 0
+    };
+  }
+
+  componentDidMount() {
+    firebase
+      .firestore()
+      .collection("applicants")
+      .get()
+      .then(snapshot => {
+        this.setState({ number_of_applicants: snapshot.docs.length });
+        const applicant = snapshot.docs.map(doc => ({
+          id: doc.id,
+          ...doc.data()
+        }));
+      });
+  }
+
   render() {
     return (
       <>
@@ -55,11 +80,16 @@ class Tables extends React.Component {
                 <CardHeader className="border-0">
                   <h3 className="mb-0">Applicants</h3>
                 </CardHeader>
-
                 {/* Load table of applicants from firebase */}
+                {/* {!this.state.number_of_applicants ? (
+                  <h1>Loading</h1>
+                ) : (
+                  <h2>{this.state.number_of_applicants}</h2>
+                )} */}
+
                 <ApplicantsList />
 
-                <CardFooter className="py-4">
+                {/* <CardFooter className="py-4">
                   <nav aria-label="...">
                     <Pagination
                       className="pagination justify-content-end mb-0"
@@ -104,7 +134,7 @@ class Tables extends React.Component {
                       </PaginationItem>
                     </Pagination>
                   </nav>
-                </CardFooter>
+                </CardFooter> */}
               </Card>
             </div>
           </Row>

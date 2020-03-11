@@ -14,6 +14,15 @@ const ApplyForm = () => {
 
     let current_date = getDate();
 
+    let status = {
+      accept_invitation: false,
+      arbitration_agreement: false,
+      badge_photo: false,
+      drivers_license: false,
+      onboarding_videos: false,
+      profile: false
+    };
+
     firebase
       .firestore()
       .collection("applicants")
@@ -22,8 +31,9 @@ const ApplyForm = () => {
         firstName,
         lastName,
         email,
-        strippedNumber,
-        dateApply: current_date
+        phoneNumber: strippedNumber,
+        dateApply: current_date,
+        status
       })
       .then(() => {
         setFirstName("");

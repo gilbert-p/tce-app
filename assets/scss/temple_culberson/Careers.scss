@@ -65,6 +65,14 @@ a:link {
   font-size: 1em;
   white-space: nowrap;
   font-weight: bold;
+  color: black;
+}
+
+.table th,
+.table td {
+  padding: 1rem;
+  vertical-align: middle;
+  border-top: 1px solid #e9ecef;
 }
 
 .btn-neutral {

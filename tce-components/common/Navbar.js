@@ -32,7 +32,7 @@ export default function Navbar() {
         <h3 id="title_name" className="mx-5">
           Temple Culberson Enterprises
         </h3>
-        <ul className="navbar-nav ml-auto">
+        <ul className="">
           <li className="nav-item">
             <NavLink to="/tce" className="nav-link">
               Home

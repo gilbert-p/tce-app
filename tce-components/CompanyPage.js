@@ -1,7 +1,8 @@
 import React from "react";
 import "../assets/scss/temple_culberson/Team-Boxed.scss";
-import Navbar from "./common/Navbar";
+import Navbar from "./common/Navbar2";
 import Footer from "./common/Footer";
+import JumboSection from "./JumboSection";
 import HeaderImage from "./HeaderImage";
 import landing_page_img from "../assets/img/tce_team_pic.png";
 
@@ -17,6 +18,10 @@ export default function CompanyPage() {
 
       <div className="team-boxed">
         <div className="container">
+          <JumboSection
+            jumbo_title="The History of Temple Culberson Enterprises"
+            jumbo_body="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum architecto delectus esse deleniti eaque, deserunt modi, expedita corporis aliquid sequi dolorem eligendi porro magnam eos! Repudiandae, expedita tenetur! Ad facilis non soluta? Voluptatum facere aut, porro repellendus iure blanditiis placeat! Est optio dolores porro deleniti! Deserunt iste aspernatur veritatis officia!"
+          />
           <div className="intro">
             <h2 className="text-center">Meet the Team</h2>
           </div>
