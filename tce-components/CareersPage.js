@@ -103,7 +103,7 @@ export default function CareersPage() {
                 </Link>
               </td>
             </tr>
-            <tr>
+            {/* <tr>
               <th scope="row">
                 <div className=" d-inline-flex flex-row mt-4">
                   <div className="icon container">
@@ -128,7 +128,7 @@ export default function CareersPage() {
                   </Button>
                 </Link>
               </td>
-            </tr>
+            </tr> */}
           </tbody>
         </table>
       </div>

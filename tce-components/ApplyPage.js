@@ -35,11 +35,11 @@ const ApplyPage = () => {
             <h3 className="blog-post-title">Job Description</h3>
             <p className="mx-5">
               Currently, we are looking for delivery drivers to service a
-              20-mile radius from the City of Commerce. An average day consists
-              of 9 hours driving, 3- 4 days a week (Monday – Sunday). Dedicated
-              shifts with same days off if desired. Must be comfortable driving
-              high roof cargo vans (company provided vehicle). Full-time
-              preferred, Part-time acceptable
+              20-mile radius from the City of South Gate. An average day
+              consists of 9 hours driving, 3- 4 days a week (Monday – Sunday).
+              Dedicated shifts with same days off if desired. Must be
+              comfortable driving high roof cargo vans (company provided
+              vehicle). Full-time preferred, Part-time acceptable
             </p>
             <hr />
             <h3 className="blog-post-title">Location</h3>

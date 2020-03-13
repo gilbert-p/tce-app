@@ -14,28 +14,18 @@ export default function Newsletter() {
         <div class="row">
           <div class="col-md-8 blog-main">
             <div class="blog-post">
-              <h2 class="blog-post-title">Sample Newsletter</h2>
+              <h2 class="blog-post-title">Moving to South Gate</h2>
               <p class="blog-post-meta">
-                January 01, 2020 by <a href="#">Eric</a>
+                March 12, 2020 by <a href="#">Eric</a>
               </p>
               <hr />
               <p>
-                Cum sociis natoque penatibus et magnis
-                <a href="#">dis parturient montes</a>, nascetur ridiculus mus.
-                Aenean eu leo quam. Pellentesque ornare sem lacinia quam
-                venenatis vestibulum. Sed posuere consectetur est at lobortis.
-                Cras mattis consectetur purus sit amet fermentum.
+                We are currently in the process of expanding our services; we
+                are relocating to a larger operation in South Gate.
               </p>
-              <blockquote>
-                <p>
-                  Curabitur blandit tempus porttitor.
-                  <strong>Nullam quis risus eget urna mollis</strong> ornare vel
-                  eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.
-                </p>
-              </blockquote>
             </div>
 
-            <div class="blog-post">
+            {/* <div class="blog-post">
               <h2 class="blog-post-title">Sample Newsletter</h2>
               <p class="blog-post-meta">
                 January 01, 2020 by <a href="#">Eric</a>
@@ -66,9 +56,9 @@ export default function Newsletter() {
                 ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta
                 ac consectetur ac, vestibulum at eros.
               </p>
-            </div>
+            </div> */}
 
-            <div class="blog-post">
+            {/* <div class="blog-post">
               <h2 class="blog-post-title">Sample Newsletter</h2>
               <p class="blog-post-meta">
                 January 01, 2020 by <a href="#">Eric</a>
@@ -91,19 +81,10 @@ export default function Newsletter() {
                 Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae
                 elit libero, a pharetra augue.
               </p>
-            </div>
-
-            <nav class="blog-pagination">
-              <a class="btn btn-outline-primary" href="#">
-                Older
-              </a>
-              <a class="btn btn-outline-secondary disabled" href="#">
-                Newer
-              </a>
-            </nav>
+            </div> */}
           </div>
 
-          <aside class="col-md-4 blog-sidebar">
+          {/* <aside class="col-md-4 blog-sidebar">
             <div class="p-3 mb-3 bg-light rounded">
               <h4 class="font-italic">About</h4>
               <p class="mb-0">
@@ -127,7 +108,7 @@ export default function Newsletter() {
                 </li>
               </ol>
             </div>
-          </aside>
+          </aside> */}
         </div>
       </main>
       <Footer />

@@ -25,7 +25,7 @@ export default function HeaderImage(props) {
     default:
       return (
         <animated.div style={animatedProps}>
-          <img className="img-fluid mb-5" src={props.source} alt="" />;
+          <img className="img-fluid mb-5" src={props.source} alt="" />
         </animated.div>
       );
   }
