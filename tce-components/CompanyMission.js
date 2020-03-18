@@ -1,5 +1,5 @@
 import React from "react";
-import company_mission_img from "../assets/img/Photo by VanveenJF on Unsplash.png";
+import company_mission_img from "../assets/img/Photo by VanveenJF on Unsplash_sm.png";
 
 export default function CompanyMission() {
   return (
