@@ -4,7 +4,7 @@ import Navbar from "./common/Navbar2";
 import Footer from "./common/Footer";
 import JumboSection from "./JumboSection";
 import HeaderImage from "./HeaderImage";
-import landing_page_img from "../assets/img/tce_team_pic.png";
+import landing_page_img from "../assets/img/tce_team_pic_sm.png";
 
 import ceo_img from "../assets/img/eric-culberson-profile-pic.png";
 import test_img1 from "../assets/img/2.jpg";

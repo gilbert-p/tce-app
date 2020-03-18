@@ -4,7 +4,7 @@ import Navbar from "./common/Navbar2";
 import Footer from "./common/Footer";
 import HeaderImage from "./HeaderImage";
 import GoogleMaps from "./Map";
-import landing_page_img from "../assets/img/Photo by Ilya Pavlov on Unsplash.png";
+import landing_page_img from "../assets/img/Photo by Ilya Pavlov on Unsplash_sm.png";
 import firebase from "../firebase.js";
 import Button from "react-bootstrap/Button";
 

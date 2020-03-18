@@ -3,7 +3,7 @@ import "../assets/scss/temple_culberson/Newsletter.scss";
 import Navbar from "./common/Navbar2";
 import Footer from "./common/Footer";
 import HeaderImage from "./HeaderImage";
-import landing_page_img from "../assets/img/Photo by Aaron Burden on Unsplash.png";
+import landing_page_img from "../assets/img/Photo by Aaron Burden on Unsplash_sm.png";
 
 export default function Newsletter() {
   return (
@@ -16,10 +16,10 @@ export default function Newsletter() {
             <div class="blog-post">
               <h2 class="blog-post-title">Moving to South Gate</h2>
               <p class="blog-post-meta">
-                March 12, 2020 by <a href="#">Eric</a>
+                March 12, 2020 by <a href="#">Eric Culberson</a>
               </p>
               <hr />
-              <p>
+              <p style={{ fontWeight: "bold" }}>
                 We are currently in the process of expanding our services; we
                 are relocating to a larger operation in South Gate.
               </p>

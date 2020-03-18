@@ -2,8 +2,6 @@ import React from "react";
 import "../assets/scss/temple_culberson/HeaderImage.scss";
 import SlideText from "./SlideText";
 import { useSpring, animated } from "react-spring";
-import smallImgTest from "../assets/img/landing_page_img_blnk.png";
-import otherImg from "../assets/img/Photo by Aaron Burden on Unsplash.png";
 
 export default function HeaderImage(props) {
   const animatedProps = useSpring({
@@ -19,9 +17,9 @@ export default function HeaderImage(props) {
           <SlideText />
           <img
             className="header-image  mb-5"
-            src={smallImgTest}
-            srcset={`${otherImg} 2000w,${smallImgTest} 1000w`}
-            sizes="(min-width: 960px) 960px, 100vw"
+            src={props.source}
+            // srcset={`${props.source} 1000w`}
+            // sizes="(min-width: 960px) 960px, 100vw"
             alt="van fleet"
           />
         </animated.div>
@@ -29,7 +27,11 @@ export default function HeaderImage(props) {
     default:
       return (
         <animated.div style={animatedProps}>
-          <img className="img-fluid mb-5" src={props.source} alt="" />
+          <img
+            className="header-image img-fluid mb-5"
+            src={props.source}
+            alt=""
+          />
         </animated.div>
       );
   }

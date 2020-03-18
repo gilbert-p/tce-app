@@ -3,7 +3,7 @@ import "../assets/scss/temple_culberson/Careers.scss";
 import Navbar from "./common/Navbar2";
 import Footer from "./common/Footer";
 import HeaderImage from "./HeaderImage";
-import landing_page_img from "../assets/img/landing_page_img.png";
+import landing_page_img from "../assets/img/landing_page_img_blnk.png";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import {
   Button,

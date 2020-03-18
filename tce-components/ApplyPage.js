@@ -4,7 +4,7 @@ import Navbar from "./common/Navbar2";
 import Footer from "./common/Footer";
 import HeaderImage from "./HeaderImage";
 import ApplyForm from "./ApplyForm";
-import landing_page_img from "../assets/img/apply-page-img.png";
+import landing_page_img from "../assets/img/apply-page-img_sm.png";
 
 const ApplyPage = () => {
   return (

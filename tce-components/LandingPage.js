@@ -3,7 +3,7 @@ import "../assets/scss/temple_culberson/Landing-Page.scss";
 import Navbar from "./common/Navbar2";
 import Footer from "./common/Footer";
 import HeaderImage from "./HeaderImage";
-import landing_page_img from "../assets/img/landing_page_img_blnk_lg.png";
+import landing_page_img from "../assets/img/landing_page_img_blnk.png";
 import JumboSection from "./JumboSection";
 import CompanyMission from "./CompanyMission";
 import ApplySection from "./ApplySection";
