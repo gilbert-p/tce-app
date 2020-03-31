@@ -96,6 +96,9 @@ a:link {
   color: black;
 }
 
+@media (max-width: 960px) {
+}
+
 @media screen and (max-width: 480px) {
   .table .thead-dark th {
     color: white;

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import firebase from "../firebase.js";
 
-const ApplyForm = () => {
+const ApplyForm = props => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -33,6 +33,7 @@ const ApplyForm = () => {
         email,
         phoneNumber: strippedNumber,
         dateApply: current_date,
+        position: props.job_title,
         status
       })
       .then(() => {
@@ -111,7 +112,7 @@ const ApplyForm = () => {
           </div>
         </div>
 
-        <h4>
+        {/* <h4>
           Upload Cv <p className="text-muted">(optional)</p>
         </h4>
         <div className="custom-file mb-3">
@@ -119,7 +120,7 @@ const ApplyForm = () => {
           <label className="custom-file-label" for="customFile">
             Choose file
           </label>
-        </div>
+        </div> */}
         <input className="btn btn-primary" type="submit" value="submit" />
       </form>
     </div>

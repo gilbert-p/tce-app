@@ -32,8 +32,6 @@ function GetApplicants() {
 function CheckApplicantStatus(applicant) {
   const { status } = applicant;
 
-  const useForceUpdate = () => useState()[1];
-
   let status_count = 0;
   let applicant_status = false;
 
@@ -44,7 +42,6 @@ function CheckApplicantStatus(applicant) {
   }
 
   if (status_count >= 6) {
-    console.log("Status Complete");
     applicant_status = true;
   }
 
@@ -53,8 +50,6 @@ function CheckApplicantStatus(applicant) {
 
 const ApplicantsList = props => {
   let applicants = GetApplicants();
-
-  console.log("ApplicantList");
 
   return (
     <Table className="align-items-center table-flush table-striped" responsive>

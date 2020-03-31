@@ -6,7 +6,9 @@ import HeaderImage from "./HeaderImage";
 import ApplyForm from "./ApplyForm";
 import landing_page_img from "../assets/img/apply-page-img_sm.png";
 
-const ApplyPage = () => {
+const ApplyPage = props => {
+  const { job_type } = props.location.state;
+
   return (
     <>
       <Navbar />
@@ -29,7 +31,7 @@ const ApplyPage = () => {
 
             <h3 className="blog-post-title">Job Title</h3>
             <h4 id="job-title" className="mx-5 my-3">
-              Delivery Driver
+              {job_type}
             </h4>
 
             <h3 className="blog-post-title">Job Description</h3>
@@ -87,7 +89,7 @@ const ApplyPage = () => {
         </div>
       </div>
 
-      <ApplyForm />
+      <ApplyForm job_title={job_type} />
 
       <Footer />
     </>

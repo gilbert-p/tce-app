@@ -5,6 +5,7 @@
   width: 100%;
   height: 250px;
   margin-top: 30px;
+  margin-bottom: 120px;
 }
 
 #contact-img {
@@ -68,8 +69,18 @@ textarea {
   overflow: hidden;
 }
 
+.strongText {
+  font-size: 1.4em;
+}
+
 @media (min-width: 1200px) {
   .container {
     max-width: 1140px;
+  }
+}
+
+@media (max-width: 360px) {
+  #contact-title {
+    font-size: 32px;
   }
 }

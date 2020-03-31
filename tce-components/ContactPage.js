@@ -47,10 +47,20 @@ const ContactPage = () => {
           <div id="contact-detail" className="col-lg-5">
             <h3 id="contact-title">GET IN TOUCH</h3>
             <p>
-              We'd love to hear from you! Fill out the form and one of our team
-              members will get in touch with you.
+              If you have any questions about the hiring process or job related
+              information, please contact us by filling out the form. You can
+              also contact us directly at
+              <br />
+              <strong className="strongText">tcenterprises.hr@gmail.com</strong>
+            </p>
+            <h2>Location</h2>
+            <p>
+              <strong className="strongText">9350 Rail Ave, South Gate</strong>
+              <br />
+              <strong>Amazon Delivery Station DAX7</strong>
             </p>
           </div>
+
           <div id="form-container" className="col-lg-7 col-md-12 mb-3">
             <form onSubmit={onSubmit} id="contact-form">
               <div className="row">
