@@ -1,22 +1,20 @@
 {
   "files": {
     "main.css": "/static/css/main.ab47b63b.chunk.css",
-    "main.js": "/static/js/main.167e3f7a.chunk.js",
-    "main.js.map": "/static/js/main.167e3f7a.chunk.js.map",
+    "main.js": "/static/js/main.94a4fb83.chunk.js",
+    "main.js.map": "/static/js/main.94a4fb83.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.a3a2a8a7.js",
     "runtime-main.js.map": "/static/js/runtime-main.a3a2a8a7.js.map",
     "static/css/2.cdc8d874.chunk.css": "/static/css/2.cdc8d874.chunk.css",
-    "static/js/2.f541d484.chunk.js": "/static/js/2.f541d484.chunk.js",
-    "static/js/2.f541d484.chunk.js.map": "/static/js/2.f541d484.chunk.js.map",
+    "static/js/2.dfa75183.chunk.js": "/static/js/2.dfa75183.chunk.js",
+    "static/js/2.dfa75183.chunk.js.map": "/static/js/2.dfa75183.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.c95e8395d023012c8ec83ca0846055e4.js": "/precache-manifest.c95e8395d023012c8ec83ca0846055e4.js",
+    "precache-manifest.fd376b8be1dfd512d065b84bf0fdb41d.js": "/precache-manifest.fd376b8be1dfd512d065b84bf0fdb41d.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.cdc8d874.chunk.css.map": "/static/css/2.cdc8d874.chunk.css.map",
     "static/css/main.ab47b63b.chunk.css.map": "/static/css/main.ab47b63b.chunk.css.map",
-    "static/js/2.f541d484.chunk.js.LICENSE.txt": "/static/js/2.f541d484.chunk.js.LICENSE.txt",
-    "static/js/main.167e3f7a.chunk.js.LICENSE.txt": "/static/js/main.167e3f7a.chunk.js.LICENSE.txt",
-    "static/media/1.jpg": "/static/media/1.106372db.jpg",
-    "static/media/2.jpg": "/static/media/2.cfb863e2.jpg",
+    "static/js/2.dfa75183.chunk.js.LICENSE.txt": "/static/js/2.dfa75183.chunk.js.LICENSE.txt",
+    "static/js/main.94a4fb83.chunk.js.LICENSE.txt": "/static/js/main.94a4fb83.chunk.js.LICENSE.txt",
     "static/media/Photo by Aaron Burden on Unsplash_sm.png": "/static/media/Photo by Aaron Burden on Unsplash_sm.5c0e2cf1.png",
     "static/media/Photo by Ilya Pavlov on Unsplash_sm.png": "/static/media/Photo by Ilya Pavlov on Unsplash_sm.5639e24a.png",
     "static/media/Photo by VanveenJF on Unsplash_sm.png": "/static/media/Photo by VanveenJF on Unsplash_sm.12b15b8f.png",
@@ -36,8 +34,8 @@
   "entrypoints": [
     "static/js/runtime-main.a3a2a8a7.js",
     "static/css/2.cdc8d874.chunk.css",
-    "static/js/2.f541d484.chunk.js",
+    "static/js/2.dfa75183.chunk.js",
     "static/css/main.ab47b63b.chunk.css",
-    "static/js/main.167e3f7a.chunk.js"
+    "static/js/main.94a4fb83.chunk.js"
   ]
 }

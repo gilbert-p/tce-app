@@ -7,8 +7,6 @@ import HeaderImage from "./HeaderImage";
 import landing_page_img from "../assets/img/tce_team_pic_sm.png";
 
 import ceo_img from "../assets/img/eric-culberson-profile-pic.png";
-import test_img1 from "../assets/img/2.jpg";
-import test_img2 from "../assets/img/1.jpg";
 
 export default function CompanyPage() {
   return (
@@ -25,7 +23,7 @@ export default function CompanyPage() {
           {/* <div className="intro">
             <h2 className="text-center">CEO</h2>
           </div> */}
-          <div className="row people">
+          <div className="row justify-content-center people">
             <div className="col-md-6 col-lg-4 item">
               <div className="box">
                 <img className="rounded-circle" src={ceo_img} />

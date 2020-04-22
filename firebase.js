@@ -4,7 +4,7 @@ import "firebase/auth";
 
 // Your web app's Firebase configuration
 var firebaseConfig = {
-  apiKey: "API KEY",
+  apiKey: "APIKEY",
   authDomain: "tce-website-app.firebaseapp.com",
   databaseURL: "https://tce-website-app.firebaseio.com",
   projectId: "tce-website-app",

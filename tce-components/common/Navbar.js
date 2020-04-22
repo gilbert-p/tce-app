@@ -8,13 +8,13 @@ import {
   Route,
   Switch,
   Link,
-  NavLink
+  NavLink,
 } from "react-router-dom";
 
 export default function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-      <NavLink to="/auth" className="nav-link">
+      <NavLink to="/" className="nav-link">
         <img src={nav_logo} alt="tce_logo" />
       </NavLink>
       <button

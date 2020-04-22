@@ -7,7 +7,7 @@ import {
   NavbarToggler,
   NavbarBrand,
   Nav,
-  NavItem
+  NavItem,
 } from "reactstrap";
 
 import {
@@ -15,10 +15,10 @@ import {
   Route,
   Switch,
   Link,
-  NavLink
+  NavLink,
 } from "react-router-dom";
 
-const Navbar2 = props => {
+const Navbar2 = (props) => {
   const [collapsed, setCollapsed] = useState(true);
 
   const toggleNavbar = () => setCollapsed(!collapsed);
@@ -26,7 +26,7 @@ const Navbar2 = props => {
   return (
     <div>
       <Navbar color="dark" dark expand="lg">
-        <NavLink to="/auth" className="nav-link">
+        <NavLink to="/" className="nav-link">
           <img src={nav_logo} alt="tce_logo" />
         </NavLink>
         <NavbarBrand>Temple Culberson Enterprises</NavbarBrand>
@@ -35,7 +35,7 @@ const Navbar2 = props => {
           <Nav navbar>
             <div id="nav-items" className="d-flex">
               <NavItem>
-                <NavLink to="/tce" className="nav-link">
+                <NavLink to="/" className="nav-link">
                   Home
                 </NavLink>
               </NavItem>

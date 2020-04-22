@@ -33,7 +33,6 @@ import NewsletterPage from "tce-components/NewsletterPage.js";
 import CareersPage from "tce-components/CareersPage.js";
 import ContactPage from "tce-components/ContactPage.js";
 import ApplyPage from "tce-components/ApplyPage.js";
-import LoginPage from "argon_components/components/Login.js";
 import { FirebaseAuthProvider } from "./FirebaseAuth";
 
 ReactDOM.render(

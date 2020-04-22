@@ -97,16 +97,18 @@ const CareersPage = () => {
             </tr>
           </thead>
           <tbody>
-            {jobs.length > 0
-              ? jobs.map((job) => {
-                  return JobRowListings(
-                    job.title,
-                    job.location,
-                    job.type,
-                    job.date
-                  );
-                })
-              : null}
+            {jobs.length > 0 ? (
+              jobs.map((job) => {
+                return JobRowListings(
+                  job.title,
+                  job.location,
+                  job.type,
+                  job.date
+                );
+              })
+            ) : (
+              <h2>Loading</h2>
+            )}
           </tbody>
         </table>
       </div>
