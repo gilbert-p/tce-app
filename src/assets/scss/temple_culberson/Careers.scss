@@ -1,0 +1,114 @@
+#header-info {
+  background-color: #242628;
+  color: white;
+  width: 100%;
+  font-size: 1.3rem;
+}
+
+#dsp-posting {
+  color: #049ef4;
+  font-weight: bold;
+  border-radius: 20px;
+  background-color: #d9dbdd;
+}
+
+#dsp-posting:hover {
+  cursor: pointer;
+  background-color: #c4c4c4;
+}
+
+#relay-posting {
+  color: #e0441f;
+  font-weight: bold;
+}
+
+#relay-posting:hover {
+  cursor: pointer;
+  background-color: #c4c4c4;
+}
+
+#newsletter-container {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+#newsletter-ad {
+  margin-top: 100px;
+  background-color: #e2e2e2;
+  margin-bottom: 50px;
+  width: 100vw;
+}
+
+#newsletter-img {
+  overflow: hidden;
+}
+
+.basic-jumbotron {
+  background-color: white;
+}
+
+#dropdownMenuLink {
+  color: white;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+.table .thead-dark th {
+  color: white;
+  font-size: 1.25em;
+}
+
+.table td,
+.table th {
+  font-size: 1em;
+  white-space: nowrap;
+  font-weight: bold;
+  color: black;
+}
+
+.table th,
+.table td {
+  padding: 1rem;
+  vertical-align: middle;
+  border-top: 1px solid #e9ecef;
+}
+
+.btn-neutral {
+  color: white;
+  background-color: #3d3d3d;
+}
+
+.container .gg-pen {
+  top: 3px;
+  color: black;
+  --ggs: 1.4;
+}
+
+.container .gg-file-document {
+  top: 3px;
+  color: black;
+  --ggs: 2;
+}
+
+.icon {
+  color: black;
+}
+
+@media (max-width: 960px) {
+}
+
+@media screen and (max-width: 480px) {
+  .table .thead-dark th {
+    color: white;
+    font-size: 0.8125em;
+  }
+
+  .table td,
+  .table th {
+    font-size: 0.8125em;
+    white-space: nowrap;
+    font-weight: bold;
+  }
+}

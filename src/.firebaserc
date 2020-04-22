@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "tce-website-app",
+    "tce-project": "tce-website-app"
+  }
+}
