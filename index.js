@@ -40,7 +40,7 @@ ReactDOM.render(
   <FirebaseAuthProvider>
     <BrowserRouter>
       <Switch>
-        <Route path="/tce" component={tce_landing_page} />
+        <Route exact path="/" component={tce_landing_page} />
         <Route path="/company" component={CompanyPage}></Route>
         <Route path="/newsletter" component={NewsletterPage}></Route>
         <Route path="/careers" component={CareersPage}></Route>
@@ -51,7 +51,7 @@ ReactDOM.render(
           path="/auth/login"
           render={(props) => <AuthLayout {...props} />}
         />
-        <Redirect from="/" to="/tce" />
+        {/* <Redirect from="/" to="/tce" /> */}
         <Redirect from="/admin" to="/admin/applicants" />
       </Switch>
     </BrowserRouter>
