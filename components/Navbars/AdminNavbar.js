@@ -15,8 +15,12 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import firebase from "../../firebase.js";
+import { Redirect } from "react-router-dom";
+import { AuthContext } from "../../FirebaseAuth";
+
 // reactstrap components
 import {
   DropdownMenu,
@@ -32,34 +36,34 @@ import {
   Navbar,
   Nav,
   Container,
-  Media
+  Media,
+  Button,
 } from "reactstrap";
 
 import user_logo from "../../assets/img/eric-culberson-profile-pic.png";
-import firebase from "../../firebase.js";
-import { Redirect } from "react-router-dom";
 
 class AdminNavbar extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = {
-      setRedirect: false
+      setRedirect: false,
     };
+
+    this.Logout = this.Logout.bind(this);
   }
 
-  googleLogout = () => {
+  Logout() {
     firebase
       .auth()
       .signOut()
       .then(() => {
-        console.log("successfully signed out");
+        console.log("signed out!");
         this.setState({ setRedirect: true });
       })
-      .catch(e => {
-        console.log("Error occurred while signing out");
+      .catch((error) => {
+        console.log("error occurred", error);
       });
-  };
+  }
 
   render() {
     return (
@@ -87,12 +91,7 @@ class AdminNavbar extends React.Component {
                     </Media>
                   </Media>
                 </DropdownToggle>
-                <DropdownMenu className="dropdown-menu-arrow" right>
-                  <DropdownItem onClick={this.googleLogout}>
-                    <i className="ni ni-user-run" />
-                    <span>Logout</span>
-                  </DropdownItem>
-                </DropdownMenu>
+                <Button onClick={this.Logout}>Logout</Button>
               </UncontrolledDropdown>
             </Nav>
           </Container>

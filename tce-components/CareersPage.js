@@ -18,7 +18,7 @@ import {
   InputGroupText,
   InputGroup,
   Row,
-  Col
+  Col,
 } from "reactstrap";
 
 function GetJobListings() {
@@ -29,10 +29,10 @@ function GetJobListings() {
       .firestore()
       .collection("job-posts")
       .get()
-      .then(snapshot => {
-        const job_listing = snapshot.docs.map(doc => ({
+      .then((snapshot) => {
+        const job_listing = snapshot.docs.map((doc) => ({
           id: doc.id,
-          ...doc.data()
+          ...doc.data(),
         }));
         setListings(job_listing);
       });
@@ -98,7 +98,7 @@ const CareersPage = () => {
           </thead>
           <tbody>
             {jobs.length > 0
-              ? jobs.map(job => {
+              ? jobs.map((job) => {
                   return JobRowListings(
                     job.title,
                     job.location,

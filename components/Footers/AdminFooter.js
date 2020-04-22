@@ -31,7 +31,7 @@ class Footer extends React.Component {
               © 2018{" "}
               <a
                 className="font-weight-bold ml-1"
-                href="https://www.creative-tim.com?ref=adr-admin-footer"
+                href=""
                 rel="noopener noreferrer"
                 target="_blank">
                 Temple Culberson Enterprises

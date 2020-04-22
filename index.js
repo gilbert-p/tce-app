@@ -28,27 +28,33 @@ import AdminLayout from "layouts/Admin.js";
 import AuthLayout from "layouts/Auth.js";
 import tce_landing_page from "tce-components/LandingPage.js";
 import CompanyPage from "tce-components/CompanyPage.js";
+
 import NewsletterPage from "tce-components/NewsletterPage.js";
 import CareersPage from "tce-components/CareersPage.js";
 import ContactPage from "tce-components/ContactPage.js";
 import ApplyPage from "tce-components/ApplyPage.js";
+import LoginPage from "argon_components/components/Login.js";
+import { FirebaseAuthProvider } from "./FirebaseAuth";
 
 ReactDOM.render(
-  <BrowserRouter>
-    <Switch>
-      <Route path="/tce" component={tce_landing_page} />
-      <Route path="/company" component={CompanyPage}></Route>
-      <Route path="/newsletter" component={NewsletterPage}></Route>
-      <Route path="/careers" component={CareersPage}></Route>
-      <Route path="/contact" component={ContactPage}></Route>
-      <Route path="/apply" component={ApplyPage}></Route>
-      <Route path="/admin" render={props => <AdminLayout {...props} />} />
-      <Route path="/auth" render={props => <AuthLayout {...props} />} />
-      <Redirect from="/" to="/tce" />
-      <Redirect from="/admin" to="/admin/applicants" />
-      {/* <Redirect from="/admin/index" to="/admin/tables" /> */}
-      <Redirect from="/login" to="/auth/login" />
-    </Switch>
-  </BrowserRouter>,
+  <FirebaseAuthProvider>
+    <BrowserRouter>
+      <Switch>
+        <Route path="/tce" component={tce_landing_page} />
+        <Route path="/company" component={CompanyPage}></Route>
+        <Route path="/newsletter" component={NewsletterPage}></Route>
+        <Route path="/careers" component={CareersPage}></Route>
+        <Route path="/contact" component={ContactPage}></Route>
+        <Route path="/apply" component={ApplyPage}></Route>
+        <Route path="/admin" render={(props) => <AdminLayout {...props} />} />
+        <Route
+          path="/auth/login"
+          render={(props) => <AuthLayout {...props} />}
+        />
+        <Redirect from="/" to="/tce" />
+        <Redirect from="/admin" to="/admin/applicants" />
+      </Switch>
+    </BrowserRouter>
+  </FirebaseAuthProvider>,
   document.getElementById("root")
 );

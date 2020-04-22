@@ -24,7 +24,7 @@ const ContactPage = () => {
       .set({
         name,
         email,
-        message
+        message,
       })
       .then(() => {
         setName("");
@@ -73,7 +73,7 @@ const ContactPage = () => {
                     placeholder="Name"
                     required
                     value={name}
-                    onChange={e => setName(e.currentTarget.value)}
+                    onChange={(e) => setName(e.currentTarget.value)}
                   />
                 </div>
                 <div className="form-group col-lg-6">
@@ -85,7 +85,7 @@ const ContactPage = () => {
                     placeholder="name@example.com"
                     required
                     value={email}
-                    onChange={e => setEmail(e.currentTarget.value)}
+                    onChange={(e) => setEmail(e.currentTarget.value)}
                   />
                 </div>
 
@@ -97,7 +97,7 @@ const ContactPage = () => {
                     rows="3"
                     required
                     value={message}
-                    onChange={e =>
+                    onChange={(e) =>
                       setMessage(e.currentTarget.value)
                     }></textarea>
                 </div>
@@ -115,7 +115,7 @@ const ContactPage = () => {
           </div>
         </div>
       </div>
-      <GoogleMaps />
+      {/* <GoogleMaps /> */}
       {/* <MessageModal setShowState={setShowState} /> */}
       <Footer />
     </>

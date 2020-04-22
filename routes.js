@@ -15,66 +15,35 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import Index from "views/Index.js";
-import Profile from "views/examples/Profile.js";
-import Maps from "views/examples/Maps.js";
-import Register from "views/examples/Register.js";
-import Login from "views/examples/Login.js";
-import Tables from "views/examples/Tables.js";
-import Icons from "views/examples/Icons.js";
+import Index from "argon_components/Index.js";
+import Profile from "argon_components/components/Profile.js";
+import Maps from "argon_components/components/Maps.js";
+import Register from "argon_components/components/Register.js";
+import Login from "argon_components/components/Login.js";
+import Logout from "argon_components/components/Logout";
+import Applicants from "argon_components/components/Applicants.js";
+import JobListings from "argon_components/components/JobListings.js";
+import Icons from "argon_components/components/Icons.js";
 
 var routes = [
-  // {
-  //   path: "/index",
-  //   name: "Dashboard",
-  //   icon: "ni ni-tv-2 text-primary",
-  //   component: Index,
-  //   layout: "/admin"
-  // },
-  // {
-  //   path: "/icons",
-  //   name: "Icons",
-  //   icon: "ni ni-planet text-blue",
-  //   component: Icons,
-  //   layout: "/admin"
-  // },
-  // {
-  //   path: "/maps",
-  //   name: "Maps",
-  //   icon: "ni ni-pin-3 text-orange",
-  //   component: Maps,
-  //   layout: "/admin"
-  // },
-  // {
-  //   path: "/user-profile",
-  //   name: "User Profile",
-  //   icon: "ni ni-single-02 text-yellow",
-  //   component: Profile,
-  //   layout: "/admin"
-  // },
-
   {
     path: "/applicants",
     name: "Applicants",
     icon: "ni ni-bullet-list-67 text-red",
-    component: Tables,
-    layout: "/admin"
+    component: Applicants,
+    layout: "/admin",
+  },
+  {
+    path: "/joblistings",
+    name: "Job Listings",
+    icon: "ni ni-bullet-list-67 text-red",
+    component: JobListings,
+    layout: "/admin",
   },
   {
     path: "/login",
-    name: "Logout",
-    icon: "ni ni-key-25 text-info",
     component: Login,
-    layout: "/auth"
-  }
-  /*
-  {
-    path: "/register",
-    name: "Register",
-    icon: "ni ni-circle-08 text-pink",
-    component: Register,
-    layout: "/auth"
-  }
-  */
+    layout: "/auth",
+  },
 ];
 export default routes;
