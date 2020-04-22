@@ -2,11 +2,23 @@
 # Created by https://www.gitignore.io/api/web,webstorm+all,visualstudio
 # Edit at https://www.gitignore.io/?templates=web,webstorm+all,visualstudio
 
-/public
+
 /src/build
 
 ### Web ###
-
+*.asp
+*.cer
+*.csr
+*.css
+*.htm
+*.html
+*.js
+*.jsp
+*.php
+*.rss
+*.wasm
+*.wat
+*.xhtml
 
 ### WebStorm+all ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and WebStorm
