@@ -68,7 +68,7 @@ class AdminNavbar extends React.Component {
   render() {
     return (
       <>
-        {this.state.setRedirect ? <Redirect to="/tce" /> : null}
+        {this.state.setRedirect ? <Redirect to="/" /> : null}
         <Navbar className="navbar-top navbar-dark" expand="md" id="navbar-main">
           <Container fluid>
             <Link

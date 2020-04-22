@@ -20,25 +20,7 @@ import firebase from "../../firebase.js";
 import { Redirect } from "react-router";
 
 // reactstrap components
-import {
-  Badge,
-  Card,
-  CardHeader,
-  CardFooter,
-  DropdownMenu,
-  DropdownItem,
-  UncontrolledDropdown,
-  DropdownToggle,
-  Media,
-  Pagination,
-  PaginationItem,
-  PaginationLink,
-  Progress,
-  Table,
-  Container,
-  Row,
-  UncontrolledTooltip,
-} from "reactstrap";
+import { Card, CardHeader, Container, Row } from "reactstrap";
 // core components
 import Header from "components/Headers/Header.js";
 import ApplicantsList from "./ApplicantsList.js";
@@ -96,7 +78,6 @@ class Applicants extends React.Component {
                 <CardHeader className="border-0">
                   <h3 className="mb-0">Applicants</h3>
                 </CardHeader>
-
                 <ApplicantsList />
               </Card>
             </div>

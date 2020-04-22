@@ -40,7 +40,7 @@ class AdminNavbar extends React.Component {
           className="navbar-top navbar-horizontal navbar-dark"
           expand="md">
           <Container className="px-4">
-            <NavbarBrand to="/tce" tag={Link}>
+            <NavbarBrand to="/" tag={Link}>
               <img alt="..." src={nav_logo} />
               <span className="nav-link-inner--text ml-2">
                 Temple Culberson Dashboard

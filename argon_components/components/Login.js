@@ -83,7 +83,7 @@ const Login = (props) => {
                     name="userEmail"
                     id="email"
                     value={email}
-                    onChange={(e) => setEmail("test@email.com")}
+                    onChange={(e) => setEmail(e.target.value)}
                     placeholder="Enter your email"
                   />
                 </InputGroup>
@@ -102,7 +102,7 @@ const Login = (props) => {
                     id="password"
                     value={password}
                     onChange={(e) => {
-                      setPassword("tce123");
+                      setPassword(e.target.value);
                     }}
                     placeholder="password"
                   />
